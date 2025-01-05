@@ -10,14 +10,14 @@ interface ServiceCardProps {
 const ServiceCard = ({ title, description, icon: Icon }: ServiceCardProps) => {
   return (
     <motion.div
-      whileHover={{ y: -5 }}
-      className="bg-dark-secondary p-6 rounded-lg border border-gray-800 hover:border-primary transition-colors"
+      whileHover={{ y: -5, scale: 1.02 }}
+      className="glass-card p-8 rounded-xl hover:border-primary/50 transition-colors duration-300 group"
     >
-      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-        <Icon className="w-6 h-6 text-primary" />
+      <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors duration-300">
+        <Icon className="w-8 h-8 text-primary" />
       </div>
-      <h3 className="text-xl font-semibold text-light mb-2">{title}</h3>
-      <p className="text-light-secondary">{description}</p>
+      <h3 className="text-2xl font-bold text-light mb-4">{title}</h3>
+      <p className="text-light-secondary text-lg leading-relaxed">{description}</p>
     </motion.div>
   );
 };

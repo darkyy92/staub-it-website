@@ -1,8 +1,8 @@
 import Hero from "../components/Hero";
 import ServiceCard from "../components/ServiceCard";
 import Testimonials from "../components/Testimonials";
-import { Shield, Cloud, Server, Code, Brain } from "lucide-react";
 import { motion } from "framer-motion";
+import { Shield, Cloud, Server, Code, Brain } from "lucide-react";
 
 const Index = () => {
   const services = [
@@ -40,26 +40,29 @@ const Index = () => {
   return (
     <div className="bg-dark min-h-screen">
       <Hero />
+      
       <motion.section
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.8 }}
-        className="py-20 container mx-auto px-6"
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="py-32 container mx-auto px-6"
       >
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-light mb-4">
-            Unsere Services
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <span className="text-gradient">Unsere Services</span>
           </h2>
-          <p className="text-light-secondary max-w-2xl mx-auto">
+          <p className="text-xl text-light-secondary max-w-2xl mx-auto">
             Entdecke unsere umfassenden IT-Dienstleistungen für dein Unternehmen.
           </p>
         </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{ delay: 0.2 * index }}
             >
               <ServiceCard {...service} />
@@ -67,6 +70,7 @@ const Index = () => {
           ))}
         </div>
       </motion.section>
+      
       <Testimonials />
     </div>
   );
