@@ -2,11 +2,13 @@ import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 
 const Navigation = () => {
   const location = useLocation();
@@ -18,11 +20,46 @@ const Navigation = () => {
   ];
 
   const serviceLinks = [
-    { path: "/services/it-outsourcing", label: "IT-Outsourcing" },
-    { path: "/services/cybersecurity", label: "Cybersecurity" },
-    { path: "/services/cloud-backup", label: "Cloud Backup" },
-    { path: "/services/webdesign", label: "Webdesign" },
-    { path: "/services/ai-solutions", label: "AI-Lösungen" },
+    {
+      category: "IT Services",
+      items: [
+        { 
+          path: "/services/it-outsourcing", 
+          label: "IT-Outsourcing",
+          description: "Professionelle IT-Betreuung und Support für Ihr Unternehmen"
+        },
+        { 
+          path: "/services/cybersecurity", 
+          label: "Cybersecurity",
+          description: "Umfassender Schutz vor digitalen Bedrohungen"
+        },
+      ]
+    },
+    {
+      category: "Cloud & Backup",
+      items: [
+        { 
+          path: "/services/cloud-backup", 
+          label: "Cloud Backup",
+          description: "Sichere Datenspeicherung in der Cloud"
+        },
+        { 
+          path: "/services/webdesign", 
+          label: "Webdesign",
+          description: "Professionelle Webseiten für Ihren Erfolg"
+        },
+      ]
+    },
+    {
+      category: "Zukunftstechnologien",
+      items: [
+        { 
+          path: "/services/ai-solutions", 
+          label: "AI-Lösungen",
+          description: "Innovative KI-Lösungen für Ihr Business"
+        }
+      ]
+    }
   ];
 
   return (
@@ -60,23 +97,45 @@ const Navigation = () => {
                 {link.label}
               </Link>
             ))}
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center gap-1 text-lg font-semibold text-light hover:text-primary transition-all duration-300">
-                Services <ChevronDown className="h-4 w-4" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-white/95 backdrop-blur-md border-none rounded-lg shadow-lg min-w-[200px] p-2">
-                {serviceLinks.map((service) => (
-                  <DropdownMenuItem key={service.path} className="focus:bg-gray-50">
-                    <Link
-                      to={service.path}
-                      className="text-dark hover:text-primary transition-colors w-full py-2 px-3 rounded-md text-sm font-medium"
-                    >
-                      {service.label}
-                    </Link>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-lg font-semibold text-light hover:text-primary transition-all duration-300 bg-transparent">
+                    Services
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent className="bg-white/95 backdrop-blur-md border-none rounded-lg shadow-lg w-[600px] p-6">
+                    <div className="grid grid-cols-3 gap-6">
+                      {serviceLinks.map((category) => (
+                        <div key={category.category}>
+                          <h3 className="font-semibold text-dark mb-3">
+                            {category.category}
+                          </h3>
+                          <ul className="space-y-2">
+                            {category.items.map((service) => (
+                              <li key={service.path}>
+                                <NavigationMenuLink asChild>
+                                  <Link
+                                    to={service.path}
+                                    className="block p-2 hover:bg-gray-50 rounded-md transition-colors"
+                                  >
+                                    <div className="text-sm font-medium text-dark">
+                                      {service.label}
+                                    </div>
+                                    <p className="text-xs text-gray-500 mt-1">
+                                      {service.description}
+                                    </p>
+                                  </Link>
+                                </NavigationMenuLink>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
           </div>
         </div>
       </div>
