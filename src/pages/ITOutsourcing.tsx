@@ -21,7 +21,7 @@ const ITOutsourcing = () => {
           <ServiceCard
             icon={Server}
             title="IT-Support"
-            description="24/7 Support für alle IT-Fragen und Probleme. Schnelle Reaktionszeiten und kompetente Hilfe durch unser erfahrenes Team."
+            description="Persönlicher Support mit schnellen Reaktionszeiten. Unser erfahrenes Team steht Ihnen mit individueller Betreuung zur Seite - kein anonymes Callcenter, sondern echte Menschen, die Ihr Unternehmen kennen und verstehen."
           />
           <ServiceCard
             icon={Shield}
