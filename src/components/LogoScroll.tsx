@@ -49,7 +49,7 @@ const LogoScroll = () => {
   }, [controls]);
 
   return (
-    <section className="py-2 relative overflow-hidden">
+    <section className="py-1 relative overflow-hidden">
       {/* Grid background */}
       <div className="absolute inset-0 bg-white">
         <div 
@@ -75,7 +75,7 @@ const LogoScroll = () => {
         {/* Scrolling container */}
         <div className="flex overflow-hidden" ref={containerRef}>
           <motion.div
-            className="flex gap-16 items-center py-8"
+            className="flex gap-16 items-center py-4"
             animate={controls}
             style={{
               width: "fit-content",
