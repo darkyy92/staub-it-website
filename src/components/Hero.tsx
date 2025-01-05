@@ -38,7 +38,7 @@ const Hero = () => {
         whileHover={{ y: -4 }}
         whileTap={{ scale: 0.95 }}
       >
-        <ChevronDown className="w-6 h-6 animate-bounce" />
+        <ChevronDown className="w-6 h-6 animate-float" />
       </motion.button>
     </div>
   );
