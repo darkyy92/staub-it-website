@@ -19,6 +19,12 @@ const Index = () => {
         "Umfassender Schutz deiner Systeme vor modernen Bedrohungen.",
     },
     {
+      icon: FileText,
+      title: "Google Workspace",
+      description:
+        "Professionelle E-Mail, Kalender und Dokumentenverwaltung für dein Team.",
+    },
+    {
       icon: Cloud,
       title: "Cloud Backup",
       description: "Sichere und zuverlässige Datensicherung in der Cloud.",
@@ -34,12 +40,6 @@ const Index = () => {
       title: "AI-Lösungen",
       description:
         "Innovative KI-Integrationen für optimierte Geschäftsprozesse.",
-    },
-    {
-      icon: FileText,
-      title: "Google Workspace",
-      description:
-        "Professionelle E-Mail, Kalender und Dokumentenverwaltung für dein Team.",
     },
   ];
 
