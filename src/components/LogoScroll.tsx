@@ -50,7 +50,7 @@ const LogoScroll = () => {
               x: {
                 repeat: Infinity,
                 repeatType: "loop",
-                duration: 15,
+                duration: 30,
                 ease: "linear",
               },
             }}
@@ -59,10 +59,10 @@ const LogoScroll = () => {
               minWidth: "100%"
             }}
           >
-            {/* First set of logos */}
+            {/* Multiple sets of logos for seamless loop */}
             <LogoRow logos={logos} />
-            
-            {/* Duplicate sets for seamless loop */}
+            <LogoRow logos={logos} />
+            <LogoRow logos={logos} />
             <LogoRow logos={logos} />
             <LogoRow logos={logos} />
           </motion.div>
