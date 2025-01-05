@@ -25,13 +25,10 @@ const Navigation = () => {
             className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
             <img 
-              src="/lovable-uploads/03c9638f-4310-4299-921f-e2fbce62352d.png" 
+              src="/lovable-uploads/7d053d9e-8b9e-4cee-988c-217023ef4f57.png" 
               alt="Staub IT Logo" 
               className="h-8 w-auto"
             />
-            <span className="text-xl sm:text-2xl font-bold text-light hover:text-primary transition-colors">
-              Staub IT
-            </span>
           </Link>
 
           {/* Mobile menu button */}
