@@ -37,7 +37,7 @@
 }
 
 .glass-card {
-  @apply bg-dark-secondary/70 backdrop-blur-md shadow-lg shadow-black/10;
+  @apply bg-dark-secondary/70 backdrop-blur-md shadow-xl shadow-black/30 border border-gray-800/20;
 }
 
 .text-gradient {
