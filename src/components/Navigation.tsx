@@ -64,12 +64,12 @@ const Navigation = () => {
               <DropdownMenuTrigger className="flex items-center gap-1 text-lg font-semibold text-light hover:text-primary transition-all duration-300">
                 Services <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-dark-secondary/95 backdrop-blur-md border-gray-800">
+              <DropdownMenuContent className="bg-white/95 backdrop-blur-md border-none rounded-lg shadow-lg min-w-[200px] p-2">
                 {serviceLinks.map((service) => (
-                  <DropdownMenuItem key={service.path} className="focus:bg-primary/20">
+                  <DropdownMenuItem key={service.path} className="focus:bg-gray-50">
                     <Link
                       to={service.path}
-                      className="text-light hover:text-primary transition-colors w-full py-1"
+                      className="text-dark hover:text-primary transition-colors w-full py-2 px-3 rounded-md text-sm font-medium"
                     >
                       {service.label}
                     </Link>
