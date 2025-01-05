@@ -18,7 +18,12 @@ export const MobileMenu = ({ isOpen, currentPath, onClose }: MobileMenuProps) =>
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
-      className="absolute top-full left-0 right-0 mt-4 p-4 glass-card rounded-xl md:hidden"
+      className="fixed inset-x-0 top-[calc(100%+1rem)] mx-4 p-4 glass-card rounded-xl md:hidden isolate"
+      style={{
+        backgroundColor: 'rgba(26, 26, 26, 0.8)',
+        backdropFilter: 'blur(16px)',
+        WebkitBackdropFilter: 'blur(16px)',
+      }}
     >
       <div className="flex flex-col gap-4">
         <Link
