@@ -38,7 +38,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="flex flex-col bg-dark">
+    <div className="flex flex-col">
       <Hero />
       
       <motion.section

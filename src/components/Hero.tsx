@@ -4,8 +4,22 @@ import { ArrowRight } from "lucide-react";
 const Hero = () => {
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-dark via-dark-secondary to-primary/10" />
+      {/* Grid background */}
+      <div className="absolute inset-0 bg-dark">
+        <div 
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `
+              linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px)
+            `,
+            backgroundSize: '60px 60px'
+          }}
+        />
+      </div>
+
+      {/* Dark overlay with gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-dark via-dark to-primary/5" />
       
       {/* Animated circles in background */}
       <div className="absolute inset-0 overflow-hidden">
@@ -43,15 +57,11 @@ const Hero = () => {
             transition={{ delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <button
-              className="group bg-primary hover:bg-primary-dark text-light px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-2 text-lg"
-            >
+            <button className="group bg-primary hover:bg-primary-dark text-light px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-2 text-lg">
               Jetzt beraten lassen
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
-            <button
-              className="text-light border-2 border-light/20 hover:border-primary px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm"
-            >
+            <button className="text-light border-2 border-light/20 hover:border-primary px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm">
               Unsere Services
             </button>
           </motion.div>

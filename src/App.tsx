@@ -20,7 +20,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <Navigation />
-          <main className="flex-grow">
+          <main className="flex-grow flex flex-col">
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/services" element={<Services />} />
