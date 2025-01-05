@@ -1,14 +1,28 @@
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
+import { ChevronDown } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Navigation = () => {
   const location = useLocation();
 
   const links = [
     { path: "/", label: "Home" },
-    { path: "/services", label: "Services" },
     { path: "/about", label: "Über uns" },
     { path: "/contact", label: "Kontakt" },
+  ];
+
+  const serviceLinks = [
+    { path: "/services/it-outsourcing", label: "IT-Outsourcing" },
+    { path: "/services/cybersecurity", label: "Cybersecurity" },
+    { path: "/services/cloud-backup", label: "Cloud Backup" },
+    { path: "/services/webdesign", label: "Webdesign" },
+    { path: "/services/ai-solutions", label: "AI-Lösungen" },
   ];
 
   return (
@@ -46,6 +60,23 @@ const Navigation = () => {
                 {link.label}
               </Link>
             ))}
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center gap-1 text-lg font-semibold text-light hover:text-primary transition-all duration-300">
+                Services <ChevronDown className="h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-dark-secondary/95 backdrop-blur-md border-gray-800">
+                {serviceLinks.map((service) => (
+                  <DropdownMenuItem key={service.path} className="focus:bg-primary/20">
+                    <Link
+                      to={service.path}
+                      className="text-light hover:text-primary transition-colors w-full py-1"
+                    >
+                      {service.label}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
         </div>
       </div>
