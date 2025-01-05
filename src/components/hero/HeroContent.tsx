@@ -22,19 +22,31 @@ const HeroContent = () => {
           transition={{ delay: 0.4, duration: 0.6 }}
         >
           <motion.span 
-            className="text-gradient inline-block"
+            className="inline-block"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
+            style={{
+              background: 'linear-gradient(to right, #de4d34, #eea03c)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text'
+            }}
           >
-            Dein Partner
+            Innovative IT
           </motion.span>{" "}
-          <span className="text-light">für innovative</span>{" "}
+          <span className="text-light">für KMU und</span>{" "}
           <motion.span 
-            className="text-gradient inline-block"
+            className="inline-block"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
+            style={{
+              background: 'linear-gradient(to right, #de4d34, #eea03c)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text'
+            }}
           >
-            IT-Lösungen
+            Bildung
           </motion.span>
         </motion.h1>
         <motion.p 
@@ -43,39 +55,32 @@ const HeroContent = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
         >
-          Wir bringen dein Unternehmen mit modernster Technologie und
-          persönlicher Beratung voran.
+          Von der Cloud bis zur Hardware – alles aus einer Hand.
         </motion.p>
       </motion.div>
 
-      <HeroButtons />
-    </motion.div>
-  );
-};
-
-const HeroButtons = () => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ delay: 0.8 }}
-      className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-    >
-      <motion.button 
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        className="group bg-primary hover:bg-primary-dark text-light px-8 py-4 rounded-full transition-all duration-300 flex items-center gap-2 text-lg glass-button"
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.8 }}
+        className="flex flex-col sm:flex-row gap-4 justify-center items-center"
       >
-        Jetzt beraten lassen
-        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-      </motion.button>
-      <motion.button 
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        className="text-light border-2 border-light/20 hover:border-primary px-8 py-4 rounded-full transition-all duration-300 backdrop-blur-sm glass-button"
-      >
-        Unsere Services
-      </motion.button>
+        <motion.button 
+          whileHover={{ scale: 1.05, backgroundColor: '#c65f2a' }}
+          whileTap={{ scale: 0.95 }}
+          className="group bg-primary hover:bg-primary-dark text-light px-8 py-4 rounded-full transition-all duration-300 flex items-center gap-2 text-lg glass-button shadow-lg hover:shadow-xl hover:shadow-primary/20"
+        >
+          Unverbindliche Beratung
+          <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+        </motion.button>
+        <motion.button 
+          whileHover={{ scale: 1.05, borderColor: '#e5793a' }}
+          whileTap={{ scale: 0.95 }}
+          className="text-light border-2 border-light/20 hover:border-primary px-8 py-4 rounded-full transition-all duration-300 backdrop-blur-sm glass-button hover:bg-dark-secondary/50 hover:shadow-lg"
+        >
+          Lösungen entdecken
+        </motion.button>
+      </motion.div>
     </motion.div>
   );
 };
