@@ -80,15 +80,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-light-secondary">
                 <MapPin size={20} className="text-primary" />
-                <span>Musterstraße 123, 12345 Stadt</span>
+                <span>Frauenfelderstrasse 39, CH-8370 Sirnach</span>
               </div>
               <div className="flex items-center space-x-3 text-light-secondary">
                 <Phone size={20} className="text-primary" />
-                <span>+49 123 456789</span>
+                <span>+41 52 347 11 80</span>
               </div>
               <div className="flex items-center space-x-3 text-light-secondary">
                 <Mail size={20} className="text-primary" />
-                <span>info@staub-it.de</span>
+                <span>hello@staub-it.ch</span>
               </div>
             </div>
           </motion.div>

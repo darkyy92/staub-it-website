@@ -51,15 +51,15 @@ const Contact = () => {
                 <div className="space-y-4">
                   <div className="flex items-center text-light-secondary">
                     <MapPin className="w-5 h-5 mr-3 text-primary" />
-                    <span>Musterstraße 123, 12345 Stadt</span>
+                    <span>Frauenfelderstrasse 39, CH-8370 Sirnach</span>
                   </div>
                   <div className="flex items-center text-light-secondary">
                     <Phone className="w-5 h-5 mr-3 text-primary" />
-                    <span>+49 123 456789</span>
+                    <span>+41 52 347 11 80</span>
                   </div>
                   <div className="flex items-center text-light-secondary">
                     <Mail className="w-5 h-5 mr-3 text-primary" />
-                    <span>info@staub-it.de</span>
+                    <span>hello@staub-it.ch</span>
                   </div>
                 </div>
               </div>
