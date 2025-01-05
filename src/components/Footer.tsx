@@ -1,4 +1,4 @@
-import { Facebook, Twitter, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -20,17 +20,6 @@ const Footer = () => {
             <p className="text-light-secondary">
               Dein zuverlässiger Partner für innovative IT-Lösungen und erstklassigen Service.
             </p>
-            <div className="flex space-x-4">
-              <a href="https://facebook.com" className="text-light-secondary hover:text-primary transition-colors">
-                <Facebook size={20} />
-              </a>
-              <a href="https://twitter.com" className="text-light-secondary hover:text-primary transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="https://linkedin.com" className="text-light-secondary hover:text-primary transition-colors">
-                <Linkedin size={20} />
-              </a>
-            </div>
           </motion.div>
 
           {/* Quick Links */}
