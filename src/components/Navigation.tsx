@@ -15,20 +15,25 @@ const Navigation = () => {
     <motion.nav
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-dark-secondary/80 backdrop-blur-lg border-b border-gray-800"
+      className="fixed top-6 left-1/2 -translate-x-1/2 z-50"
     >
-      <div className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          <Link to="/" className="text-2xl font-bold text-light">
+      <div className="glass-card rounded-full px-8 py-4 border-gray-800/50">
+        <div className="flex items-center justify-center space-x-12">
+          <Link 
+            to="/" 
+            className="text-2xl font-bold text-light hover:text-primary transition-colors"
+          >
             Staub IT
           </Link>
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-10">
             {links.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-light hover:text-primary transition-colors ${
-                  location.pathname === link.path ? "text-primary" : ""
+                className={`text-lg font-semibold transition-all duration-300 ${
+                  location.pathname === link.path
+                    ? "text-primary scale-105"
+                    : "text-light hover:text-primary hover:scale-105"
                 }`}
               >
                 {link.label}
