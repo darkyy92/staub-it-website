@@ -23,33 +23,11 @@ const Navigation = () => {
             to="/" 
             className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="text-primary"
-            >
-              <path
-                d="M18.5 10.5C18.5 6.5 15.5 4 12 4C8.5 4 6.5 6.5 6.5 8.5C6.5 9.5 7 10 7.5 10C8.5 10 9 9 9 8.5C9 8 8.5 7.5 8 7.5C7.5 7.5 7 8 7 8.5"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-              <path
-                d="M17 8.5C17 8 16.5 7.5 16 7.5C15.5 7.5 15 8 15 8.5C15 9 15.5 10 16.5 10C17 10 17.5 9.5 17.5 8.5C17.5 6.5 15.5 4 12 4"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-              <path
-                d="M12 4C8.5 4 6.5 6.5 6.5 8.5C6.5 12.5 9.5 15 12 15C14.5 15 17.5 12.5 17.5 8.5"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-            </svg>
+            <img 
+              src="/lovable-uploads/03c9638f-4310-4299-921f-e2fbce62352d.png" 
+              alt="Staub IT Logo" 
+              className="h-8 w-auto"
+            />
             <span className="text-2xl font-bold text-light hover:text-primary transition-colors">
               Staub IT
             </span>
