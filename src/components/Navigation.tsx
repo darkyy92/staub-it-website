@@ -76,7 +76,6 @@ const Navigation = () => {
             </div>
             <div className="flex items-center gap-10">
               <Button 
-                variant="outline"
                 className="text-light border-2 border-light/20 hover:border-primary px-8 py-4 rounded-full transition-all duration-300 backdrop-blur-sm glass-button hover:bg-dark-secondary/50 hover:shadow-lg"
                 onClick={() => window.open('https://anydesk.com/download', '_blank')}
               >
