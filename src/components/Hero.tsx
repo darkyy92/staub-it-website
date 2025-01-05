@@ -23,8 +23,18 @@ const Hero = () => {
       
       {/* Animated circles in background */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/20 rounded-full blur-3xl animate-float" />
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-float delay-1000" />
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 0.2, scale: 1 }}
+          transition={{ duration: 1.5, repeat: Infinity, repeatType: "reverse" }}
+          className="absolute -top-40 -right-40 w-80 h-80 bg-primary/20 rounded-full blur-3xl"
+        />
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 0.1, scale: 1 }}
+          transition={{ duration: 2, repeat: Infinity, repeatType: "reverse", delay: 0.5 }}
+          className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"
+        />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -40,30 +50,60 @@ const Hero = () => {
             transition={{ delay: 0.2 }}
             className="mb-8"
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="text-gradient">Dein Partner</span>{" "}
+            <motion.h1 
+              className="text-5xl md:text-7xl font-bold mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+            >
+              <motion.span 
+                className="text-gradient inline-block"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                Dein Partner
+              </motion.span>{" "}
               <span className="text-light">für innovative</span>{" "}
-              <span className="text-gradient">IT-Lösungen</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-light-secondary leading-relaxed">
+              <motion.span 
+                className="text-gradient inline-block"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                IT-Lösungen
+              </motion.span>
+            </motion.h1>
+            <motion.p 
+              className="text-xl md:text-2xl text-light-secondary leading-relaxed"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6 }}
+            >
               Wir bringen dein Unternehmen mit modernster Technologie und
               persönlicher Beratung voran.
-            </p>
+            </motion.p>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.6 }}
+            transition={{ delay: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <button className="group bg-primary hover:bg-primary-dark text-light px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-2 text-lg">
+            <motion.button 
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="group bg-primary hover:bg-primary-dark text-light px-8 py-4 rounded-lg transition-all duration-300 flex items-center gap-2 text-lg"
+            >
               Jetzt beraten lassen
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button className="text-light border-2 border-light/20 hover:border-primary px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm">
+            </motion.button>
+            <motion.button 
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="text-light border-2 border-light/20 hover:border-primary px-8 py-4 rounded-lg transition-all duration-300 backdrop-blur-sm"
+            >
               Unsere Services
-            </button>
+            </motion.button>
           </motion.div>
         </motion.div>
       </div>
