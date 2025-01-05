@@ -1,11 +1,9 @@
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
-import { ChevronDown } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
@@ -113,19 +111,17 @@ const Navigation = () => {
                           <ul className="space-y-2">
                             {category.items.map((service) => (
                               <li key={service.path}>
-                                <NavigationMenuLink asChild>
-                                  <Link
-                                    to={service.path}
-                                    className="block p-2 hover:bg-gray-50 rounded-md transition-colors"
-                                  >
-                                    <div className="text-sm font-medium text-dark">
-                                      {service.label}
-                                    </div>
-                                    <p className="text-xs text-gray-500 mt-1">
-                                      {service.description}
-                                    </p>
-                                  </Link>
-                                </NavigationMenuLink>
+                                <Link
+                                  to={service.path}
+                                  className="block p-2 hover:bg-gray-50 rounded-md transition-colors"
+                                >
+                                  <div className="text-sm font-medium text-dark">
+                                    {service.label}
+                                  </div>
+                                  <p className="text-xs text-gray-500 mt-1">
+                                    {service.description}
+                                  </p>
+                                </Link>
                               </li>
                             ))}
                           </ul>
