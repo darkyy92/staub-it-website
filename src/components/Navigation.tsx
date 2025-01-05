@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Phone } from "lucide-react";
 
 const Navigation = () => {
   const location = useLocation();
@@ -31,20 +33,39 @@ const Navigation = () => {
               Staub IT
             </span>
           </Link>
-          <div className="hidden md:flex items-center gap-10">
-            {links.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`text-lg font-semibold transition-all duration-300 ${
-                  location.pathname === link.path
-                    ? "text-primary scale-105"
-                    : "text-light hover:text-primary hover:scale-105"
-                }`}
+          <div className="flex items-center gap-6">
+            <div className="hidden md:flex items-center gap-10">
+              {links.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={`text-lg font-semibold transition-all duration-300 ${
+                    location.pathname === link.path
+                      ? "text-primary scale-105"
+                      : "text-light hover:text-primary hover:scale-105"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+            <div className="flex items-center gap-4">
+              <Button 
+                variant="default" 
+                className="bg-[#EF443B] hover:bg-[#EF443B]/90"
+                onClick={() => window.open('https://anydesk.com/download', '_blank')}
               >
-                {link.label}
-              </Link>
-            ))}
+                AnyDesk
+              </Button>
+              <Button 
+                variant="default"
+                className="bg-[#0088FF] hover:bg-[#0088FF]/90"
+                onClick={() => window.location.href = 'tel:0523471180'}
+              >
+                <Phone className="mr-2 h-4 w-4" />
+                052 347 11 80
+              </Button>
+            </div>
           </div>
         </div>
       </div>
