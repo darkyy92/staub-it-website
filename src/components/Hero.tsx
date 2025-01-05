@@ -31,7 +31,7 @@ const Hero = () => {
       {/* Floating scroll button */}
       <motion.button
         onClick={scrollToNextSection}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 glass-button rounded-full p-4 bg-primary/80 hover:bg-primary text-light group shadow-lg shadow-primary/20"
+        className="absolute bottom-8 inset-x-0 mx-auto z-20 glass-button rounded-full p-4 bg-primary/80 hover:bg-primary text-light group shadow-lg shadow-primary/20"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.2 }}
