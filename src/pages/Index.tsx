@@ -38,7 +38,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="bg-dark min-h-screen">
+    <main className="bg-dark">
       <Hero />
       
       <motion.section
@@ -72,7 +72,7 @@ const Index = () => {
       </motion.section>
       
       <Testimonials />
-    </div>
+    </main>
   );
 };
 
