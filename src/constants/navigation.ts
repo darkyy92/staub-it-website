@@ -11,7 +11,7 @@ export const services: Service[] = [
   {
     title: "IT-Outsourcing",
     description: "Professionelle IT-Betreuung, Support und Schulungen für dein Unternehmen",
-    href: "/services#it-outsourcing",
+    href: "/services/it-outsourcing",
     icon: Server
   },
   {
