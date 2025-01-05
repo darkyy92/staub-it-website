@@ -2,7 +2,7 @@ import Hero from "../components/Hero";
 import ServiceCard from "../components/ServiceCard";
 import Testimonials from "../components/Testimonials";
 import { motion } from "framer-motion";
-import { Shield, Cloud, Server, Code, Brain } from "lucide-react";
+import { Shield, Cloud, Server, Code, Brain, FileText } from "lucide-react";
 
 const Index = () => {
   const services = [
@@ -34,6 +34,12 @@ const Index = () => {
       title: "AI-Lösungen",
       description:
         "Innovative KI-Integrationen für optimierte Geschäftsprozesse.",
+    },
+    {
+      icon: FileText,
+      title: "Google Workspace",
+      description:
+        "Professionelle E-Mail, Kalender und Dokumentenverwaltung für dein Team.",
     },
   ];
 
