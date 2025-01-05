@@ -14,7 +14,7 @@ export const ServicesDropdown = () => {
         Dienstleistungen
       </NavigationMenuTrigger>
       <NavigationMenuContent>
-        <ul className="grid w-[400px] gap-4 p-6 bg-dark-secondary border-primary/20 border rounded-xl shadow-2xl">
+        <ul className="grid w-[400px] gap-4 p-6 bg-dark border-primary/10 border rounded-xl shadow-2xl">
           {services.map((service) => {
             const Icon = service.icon;
             return (
@@ -22,17 +22,17 @@ export const ServicesDropdown = () => {
                 <NavigationMenuLink asChild>
                   <Link
                     to={service.href}
-                    className="block select-none rounded-md p-4 leading-none no-underline outline-none transition-colors hover:bg-primary/10 hover:text-primary group"
+                    className="block select-none rounded-md p-4 leading-none no-underline outline-none transition-colors hover:bg-dark-secondary hover:text-primary group"
                   >
                     <div className="flex items-center gap-3">
-                      <div className="p-2 rounded-lg bg-primary/5 group-hover:bg-primary/10 transition-colors">
+                      <div className="p-2 rounded-lg bg-dark-secondary group-hover:bg-primary/10 transition-colors">
                         <Icon className="w-5 h-5 text-primary" />
                       </div>
                       <div>
-                        <div className="text-base font-semibold leading-none text-light group-hover:text-primary transition-colors">
+                        <div className="text-base font-semibold leading-none text-light/90 group-hover:text-primary transition-colors">
                           {service.title}
                         </div>
-                        <p className="mt-2 line-clamp-2 text-sm leading-snug text-light/70 group-hover:text-light/90 transition-colors">
+                        <p className="mt-2 line-clamp-2 text-sm leading-snug text-light/50 group-hover:text-light/70 transition-colors">
                           {service.description}
                         </p>
                       </div>
