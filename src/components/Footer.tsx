@@ -3,8 +3,6 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
-  
   return (
     <footer className="bg-dark-secondary mt-32 border-t border-gray-800">
       <div className="container mx-auto px-6 py-12">
@@ -98,13 +96,6 @@ const Footer = () => {
               </div>
             </div>
           </motion.div>
-        </div>
-
-        {/* Copyright */}
-        <div className="mt-12 pt-8 border-t border-gray-800">
-          <p className="text-center text-light-secondary">
-            © {currentYear} Staub IT. Alle Rechte vorbehalten.
-          </p>
         </div>
       </div>
     </footer>
