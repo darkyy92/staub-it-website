@@ -3,42 +3,14 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
+import { NavigationMenu, NavigationMenuList } from "@/components/ui/navigation-menu";
+import { navigationLinks } from "@/constants/navigation";
+import { ServicesDropdown } from "./navigation/ServicesDropdown";
+import { MobileMenu } from "./navigation/MobileMenu";
 
 const Navigation = () => {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const links = [
-    { path: "/", label: "Home" },
-    { path: "/about", label: "Über uns" },
-    { path: "/contact", label: "Kontakt" },
-  ];
-
-  const services = [
-    {
-      title: "IT Support",
-      description: "Professionelle IT-Betreuung und Support für Ihr Unternehmen",
-      href: "/services#it-support",
-    },
-    {
-      title: "Cloud Services",
-      description: "Sichere Cloud-Lösungen und Backup-Systeme",
-      href: "/services#cloud",
-    },
-    {
-      title: "Cybersecurity",
-      description: "Umfassender Schutz vor digitalen Bedrohungen",
-      href: "/services#security",
-    },
-  ];
 
   return (
     <motion.nav
@@ -87,36 +59,11 @@ const Navigation = () => {
               {/* Services Navigation Menu */}
               <NavigationMenu>
                 <NavigationMenuList>
-                  <NavigationMenuItem>
-                    <NavigationMenuTrigger className="bg-transparent text-lg font-semibold text-light hover:text-primary hover:bg-transparent">
-                      Dienstleistungen
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <ul className="grid w-[400px] gap-3 p-6 bg-dark-secondary/95 backdrop-blur-md border border-gray-800/30 rounded-xl shadow-xl">
-                        {services.map((service) => (
-                          <li key={service.title}>
-                            <NavigationMenuLink asChild>
-                              <Link
-                                to={service.href}
-                                className="block select-none space-y-2 rounded-md p-4 leading-none no-underline outline-none transition-colors hover:bg-primary/20 hover:text-primary"
-                              >
-                                <div className="text-base font-medium leading-none text-light mb-2">
-                                  {service.title}
-                                </div>
-                                <p className="line-clamp-2 text-sm leading-snug text-light-secondary">
-                                  {service.description}
-                                </p>
-                              </Link>
-                            </NavigationMenuLink>
-                          </li>
-                        ))}
-                      </ul>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
+                  <ServicesDropdown />
                 </NavigationMenuList>
               </NavigationMenu>
 
-              {links.slice(1).map((link) => (
+              {navigationLinks.slice(1).map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
@@ -150,85 +97,11 @@ const Navigation = () => {
           </div>
 
           {/* Mobile Navigation */}
-          {isMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="absolute top-full left-0 right-0 mt-4 p-4 glass-card rounded-xl border-gray-800/50 md:hidden"
-            >
-              <div className="flex flex-col gap-4">
-                <Link
-                  to="/"
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`text-lg font-semibold transition-all duration-300 ${
-                    location.pathname === "/"
-                      ? "text-primary"
-                      : "text-light hover:text-primary"
-                  }`}
-                >
-                  Home
-                </Link>
-                
-                {/* Mobile Services Menu */}
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2 text-lg font-semibold text-light">
-                    Dienstleistungen
-                  </div>
-                  <div className="pl-7 space-y-2">
-                    {services.map((service) => (
-                      <Link
-                        key={service.title}
-                        to={service.href}
-                        onClick={() => setIsMenuOpen(false)}
-                        className="block text-light-secondary hover:text-primary transition-colors"
-                      >
-                        {service.title}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-
-                {links.slice(1).map((link) => (
-                  <Link
-                    key={link.path}
-                    to={link.path}
-                    onClick={() => setIsMenuOpen(false)}
-                    className={`text-lg font-semibold transition-all duration-300 ${
-                      location.pathname === link.path
-                        ? "text-primary"
-                        : "text-light hover:text-primary"
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-                <div className="flex flex-col gap-3 pt-3 border-t border-gray-700">
-                  <Button 
-                    variant="outline"
-                    className="bg-transparent text-white hover:bg-primary-dark w-full"
-                    onClick={() => {
-                      window.open('https://anydesk.com/download', '_blank');
-                      setIsMenuOpen(false);
-                    }}
-                  >
-                    AnyDesk
-                  </Button>
-                  <Button 
-                    variant="default"
-                    className="text-white hover:bg-primary-dark w-full"
-                    onClick={() => {
-                      window.location.href = 'tel:0523471180';
-                      setIsMenuOpen(false);
-                    }}
-                  >
-                    <Phone className="mr-2 h-4 w-4 text-white" />
-                    052 347 11 80
-                  </Button>
-                </div>
-              </div>
-            </motion.div>
-          )}
+          <MobileMenu
+            isOpen={isMenuOpen}
+            currentPath={location.pathname}
+            onClose={() => setIsMenuOpen(false)}
+          />
         </div>
       </div>
     </motion.nav>
