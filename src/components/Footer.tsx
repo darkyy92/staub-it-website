@@ -16,7 +16,32 @@ const Footer = () => {
             viewport={{ once: true }}
             className="space-y-4"
           >
-            <h3 className="text-2xl font-bold text-gradient">Staub IT</h3>
+            <div className="flex items-center gap-2">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="text-primary"
+              >
+                <path
+                  d="M22 12.5C22 17.194 17.966 21 13 21C8.034 21 4 17.194 4 12.5C4 7.806 8.034 4 13 4"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M16 12.5C16 14.985 14.757 17 13 17C11.243 17 10 14.985 10 12.5C10 10.015 11.243 8 13 8"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                />
+                <path d="M2 12H4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                <path d="M19 12H22" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+              </svg>
+              <h3 className="text-2xl font-bold text-gradient">Staub IT</h3>
+            </div>
             <p className="text-light-secondary">
               Dein zuverlässiger Partner für innovative IT-Lösungen und erstklassigen Service.
             </p>
