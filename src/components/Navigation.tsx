@@ -52,7 +52,7 @@ const Navigation = () => {
             <div className="flex items-center gap-4">
               <Button 
                 variant="outline"
-                className="bg-transparent border-2 border-primary text-primary hover:bg-primary/10 transition-colors"
+                className="text-white hover:bg-primary-dark"
                 onClick={() => window.open('https://anydesk.com/download', '_blank')}
               >
                 AnyDesk
