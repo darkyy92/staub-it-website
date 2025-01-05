@@ -14,29 +14,29 @@ const ITOutsourcing = () => {
           IT-Outsourcing
         </h1>
         <p className="text-xl text-light-secondary mb-12 leading-relaxed px-4">
-          Professionelle IT-Betreuung, Support und Schulungen für Ihr Unternehmen. Wir kümmern uns um Ihre gesamte IT-Infrastruktur, damit Sie sich auf Ihr Kerngeschäft konzentrieren können.
+          Professionelle IT-Betreuung, Support und Schulungen für dein Unternehmen. Wir kümmern uns um deine gesamte IT-Infrastruktur, damit du dich auf dein Kerngeschäft konzentrieren kannst.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
           <ServiceCard
             icon={Server}
             title="IT-Support"
-            description="Persönlicher Support mit schnellen Reaktionszeiten. Unser erfahrenes Team steht Ihnen mit individueller Betreuung zur Seite - kein anonymes Callcenter, sondern echte Menschen, die Ihr Unternehmen kennen und verstehen."
+            description="Persönlicher Support mit schnellen Reaktionszeiten. Unser erfahrenes Team steht dir mit individueller Betreuung zur Seite - kein anonymes Callcenter, sondern echte Menschen, die dein Unternehmen kennen und verstehen."
           />
           <ServiceCard
             icon={Shield}
             title="IT-Sicherheit"
-            description="Umfassender Schutz Ihrer IT-Systeme vor Cyberangriffen, Viren und Datenverlust. Regelmäßige Updates und Backups inklusive."
+            description="Umfassender Schutz deiner IT-Systeme vor Cyberangriffen, Viren und Datenverlust. Regelmässige Updates und Backups inklusive."
           />
           <ServiceCard
             icon={Brain}
             title="IT-Beratung"
-            description="Strategische Beratung für die Optimierung Ihrer IT-Infrastruktur. Wir analysieren Ihre Anforderungen und entwickeln passende Lösungen."
+            description="Strategische Beratung für die Optimierung deiner IT-Infrastruktur. Wir analysieren deine Anforderungen und entwickeln passende Lösungen."
           />
           <ServiceCard
             icon={Server}
             title="IT-Wartung"
-            description="Regelmäßige Wartung und Pflege Ihrer IT-Systeme. Proaktive Überwachung und Fehlerbehebung für einen reibungslosen Betrieb."
+            description="Regelmässige Wartung und Pflege deiner IT-Systeme. Proaktive Überwachung und Fehlerbehebung für einen reibungslosen Betrieb."
           />
         </div>
       </motion.div>
