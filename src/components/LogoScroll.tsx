@@ -45,7 +45,7 @@ const logos = [
 
 const LogoScroll = () => {
   return (
-    <section className="py-32 relative overflow-hidden bg-gradient-to-b from-dark via-dark-secondary to-dark">
+    <section className="py-32 relative overflow-hidden bg-white">
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
         <div className="absolute bottom-20 right-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
@@ -61,7 +61,7 @@ const LogoScroll = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="text-gradient">Unsere Kunden</span>
           </h2>
-          <p className="text-xl text-light-secondary max-w-2xl mx-auto">
+          <p className="text-xl text-dark max-w-2xl mx-auto">
             Vertrauen auf unsere Expertise
           </p>
         </motion.div>
@@ -69,10 +69,10 @@ const LogoScroll = () => {
 
       <div className="relative">
         {/* Fade overlay left */}
-        <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-dark to-transparent z-10" />
+        <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-white to-transparent z-10" />
         
         {/* Fade overlay right */}
-        <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-dark to-transparent z-10" />
+        <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-white to-transparent z-10" />
 
         {/* Scrolling container */}
         <div className="flex overflow-hidden">
@@ -99,7 +99,7 @@ const LogoScroll = () => {
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-[40px] w-auto object-contain brightness-0 invert opacity-70 hover:opacity-100 transition-opacity duration-300"
+                  className="h-[40px] w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
                 />
               </div>
             ))}
@@ -113,7 +113,7 @@ const LogoScroll = () => {
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-[40px] w-auto object-contain brightness-0 invert opacity-70 hover:opacity-100 transition-opacity duration-300"
+                  className="h-[40px] w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
                 />
               </div>
             ))}
