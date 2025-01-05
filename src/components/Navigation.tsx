@@ -52,7 +52,7 @@ const Navigation = () => {
             <div className="flex items-center gap-4">
               <Button 
                 variant="default" 
-                className="rounded-full bg-dark-secondary hover:bg-dark text-primary hover:text-primary-light transition-colors"
+                className="rounded-full bg-dark text-primary hover:bg-dark-secondary hover:text-primary-light transition-colors"
                 onClick={() => window.open('https://anydesk.com/download', '_blank')}
               >
                 AnyDesk
