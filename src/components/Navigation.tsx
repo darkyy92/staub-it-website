@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, Phone, X, Briefcase } from "lucide-react";
+import { Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
 import {
   NavigationMenu,
@@ -89,21 +89,18 @@ const Navigation = () => {
                 <NavigationMenuList>
                   <NavigationMenuItem>
                     <NavigationMenuTrigger className="bg-transparent text-lg font-semibold text-light hover:text-primary hover:bg-transparent">
-                      <div className="flex items-center gap-2">
-                        <Briefcase className="w-5 h-5" />
-                        Dienstleistungen
-                      </div>
+                      Dienstleistungen
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
-                      <ul className="grid w-[400px] gap-3 p-4 bg-dark-secondary/95 backdrop-blur-md">
+                      <ul className="grid w-[400px] gap-3 p-6 bg-dark-secondary/95 backdrop-blur-md border border-gray-800/30 rounded-xl shadow-xl">
                         {services.map((service) => (
                           <li key={service.title}>
                             <NavigationMenuLink asChild>
                               <Link
                                 to={service.href}
-                                className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-primary/20 hover:text-primary"
+                                className="block select-none space-y-2 rounded-md p-4 leading-none no-underline outline-none transition-colors hover:bg-primary/20 hover:text-primary"
                               >
-                                <div className="text-sm font-medium leading-none text-light">
+                                <div className="text-base font-medium leading-none text-light mb-2">
                                   {service.title}
                                 </div>
                                 <p className="line-clamp-2 text-sm leading-snug text-light-secondary">
@@ -176,7 +173,6 @@ const Navigation = () => {
                 {/* Mobile Services Menu */}
                 <div className="space-y-2">
                   <div className="flex items-center gap-2 text-lg font-semibold text-light">
-                    <Briefcase className="w-5 h-5" />
                     Dienstleistungen
                   </div>
                   <div className="pl-7 space-y-2">
