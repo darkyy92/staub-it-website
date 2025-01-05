@@ -10,8 +10,8 @@ const Hero = () => {
           className="absolute inset-0"
           style={{
             backgroundImage: `
-              linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px)
+              linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px)
             `,
             backgroundSize: '60px 60px'
           }}
@@ -19,7 +19,7 @@ const Hero = () => {
       </div>
 
       {/* Dark overlay with gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-dark via-dark to-primary/5" />
+      <div className="absolute inset-0 bg-gradient-to-br from-dark/50 via-dark to-primary/5" />
       
       {/* Animated circles in background */}
       <div className="absolute inset-0 overflow-hidden">
