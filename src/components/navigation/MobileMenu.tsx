@@ -18,7 +18,7 @@ export const MobileMenu = ({ isOpen, currentPath, onClose }: MobileMenuProps) =>
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
-      className="absolute top-full left-0 right-0 mt-4 p-4 bg-dark-secondary/90 backdrop-blur-xl shadow-xl shadow-black/30 border border-gray-800/20 rounded-xl md:hidden"
+      className="absolute top-full left-0 right-0 mt-4 p-4 glass-card rounded-xl md:hidden"
     >
       <div className="flex flex-col gap-4">
         <Link
