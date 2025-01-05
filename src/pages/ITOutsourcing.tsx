@@ -4,20 +4,20 @@ import { Server, Shield, Brain } from "lucide-react";
 
 const ITOutsourcing = () => {
   return (
-    <div className="container mx-auto px-4 pt-24 pb-32 mt-16">
+    <div className="container mx-auto px-6 sm:px-4 pt-24 pb-32 mt-16">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         className="max-w-4xl mx-auto"
       >
-        <h1 className="text-4xl md:text-5xl font-bold text-light mb-6">
+        <h1 className="text-4xl md:text-5xl font-bold text-light mb-6 px-4">
           IT-Outsourcing
         </h1>
-        <p className="text-xl text-light-secondary mb-12 leading-relaxed">
+        <p className="text-xl text-light-secondary mb-12 leading-relaxed px-4">
           Professionelle IT-Betreuung, Support und Schulungen für Ihr Unternehmen. Wir kümmern uns um Ihre gesamte IT-Infrastruktur, damit Sie sich auf Ihr Kerngeschäft konzentrieren können.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
           <ServiceCard
             icon={Server}
             title="IT-Support"
