@@ -86,8 +86,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-light-secondary">
                 <MapPin size={20} className="text-primary" />
-                <span>Frauenfelderstrasse 39,
-CH-8370 Sirnach</span>
+                <span>Frauenfelderstrasse 39,<br />CH-8370 Sirnach</span>
               </div>
               <div className="flex items-center space-x-3 text-light-secondary">
                 <Phone size={20} className="text-primary" />
