@@ -15,7 +15,7 @@ import { logos } from "@/constants/logos";
 
 const LogoScroll = () => {
   return (
-    <section className="py-6 relative overflow-hidden bg-white">
+    <section className="py-2 relative overflow-hidden bg-white">
       {/* Logo scroll section */}
       <div className="relative">
         {/* Fade overlay left */}
