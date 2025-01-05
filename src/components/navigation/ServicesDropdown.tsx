@@ -14,7 +14,7 @@ export const ServicesDropdown = () => {
         Dienstleistungen
       </NavigationMenuTrigger>
       <NavigationMenuContent>
-        <ul className="grid w-[400px] gap-4 p-6 bg-dark border-primary/10 border rounded-xl shadow-2xl">
+        <ul className="grid w-[400px] gap-4 p-6 bg-dark border-dark-secondary border rounded-xl shadow-2xl">
           {services.map((service) => {
             const Icon = service.icon;
             return (
