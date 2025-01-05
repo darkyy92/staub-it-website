@@ -36,15 +36,9 @@ const HeroContent = () => {
           </motion.span>{" "}
           <span className="text-light">für KMU und</span>{" "}
           <motion.span 
-            className="inline-block"
+            className="inline-block text-light"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
-            style={{
-              background: 'linear-gradient(to right, #de4d34, #eea03c)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text'
-            }}
           >
             Bildung
           </motion.span>
