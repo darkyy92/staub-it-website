@@ -31,14 +31,14 @@ const Hero = () => {
       {/* Floating scroll button */}
       <motion.button
         onClick={scrollToNextSection}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 glass-button rounded-full p-3 bg-dark-secondary/50 hover:bg-dark-secondary/70 text-light group"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 glass-button rounded-full p-4 bg-primary/80 hover:bg-primary text-light group shadow-lg shadow-primary/20"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.2 }}
         whileHover={{ y: -4 }}
         whileTap={{ scale: 0.95 }}
       >
-        <ChevronDown className="w-6 h-6 animate-float" />
+        <ChevronDown className="w-8 h-8 animate-float" />
       </motion.button>
     </div>
   );
