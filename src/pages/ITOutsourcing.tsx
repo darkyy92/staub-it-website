@@ -4,7 +4,7 @@ import { Server, Shield, Brain } from "lucide-react";
 
 const ITOutsourcing = () => {
   return (
-    <div className="container mx-auto px-6 sm:px-4 pt-24 pb-20 mt-16">
+    <div className="container mx-auto px-6 sm:px-4 pt-24 pb-12 mt-16">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
