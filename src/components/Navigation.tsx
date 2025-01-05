@@ -1,8 +1,16 @@
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, Phone, X } from "lucide-react";
+import { Menu, Phone, X, Briefcase } from "lucide-react";
 import { useState } from "react";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 
 const Navigation = () => {
   const location = useLocation();
@@ -12,6 +20,24 @@ const Navigation = () => {
     { path: "/", label: "Home" },
     { path: "/about", label: "Über uns" },
     { path: "/contact", label: "Kontakt" },
+  ];
+
+  const services = [
+    {
+      title: "IT Support",
+      description: "Professionelle IT-Betreuung und Support für Ihr Unternehmen",
+      href: "/services#it-support",
+    },
+    {
+      title: "Cloud Services",
+      description: "Sichere Cloud-Lösungen und Backup-Systeme",
+      href: "/services#cloud",
+    },
+    {
+      title: "Cybersecurity",
+      description: "Umfassender Schutz vor digitalen Bedrohungen",
+      href: "/services#security",
+    },
   ];
 
   return (
@@ -47,7 +73,53 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
             <div className="flex items-center gap-10">
-              {links.map((link) => (
+              <Link
+                to="/"
+                className={`text-lg font-semibold transition-all duration-300 ${
+                  location.pathname === "/"
+                    ? "text-primary scale-105"
+                    : "text-light hover:text-primary hover:scale-105"
+                }`}
+              >
+                Home
+              </Link>
+
+              {/* Services Navigation Menu */}
+              <NavigationMenu>
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className="bg-transparent text-lg font-semibold text-light hover:text-primary hover:bg-transparent">
+                      <div className="flex items-center gap-2">
+                        <Briefcase className="w-5 h-5" />
+                        Dienstleistungen
+                      </div>
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <ul className="grid w-[400px] gap-3 p-4 bg-dark-secondary/95 backdrop-blur-md">
+                        {services.map((service) => (
+                          <li key={service.title}>
+                            <NavigationMenuLink asChild>
+                              <Link
+                                to={service.href}
+                                className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-primary/20 hover:text-primary"
+                              >
+                                <div className="text-sm font-medium leading-none text-light">
+                                  {service.title}
+                                </div>
+                                <p className="line-clamp-2 text-sm leading-snug text-light-secondary">
+                                  {service.description}
+                                </p>
+                              </Link>
+                            </NavigationMenuLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
+
+              {links.slice(1).map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
@@ -89,7 +161,39 @@ const Navigation = () => {
               className="absolute top-full left-0 right-0 mt-4 p-4 glass-card rounded-xl border-gray-800/50 md:hidden"
             >
               <div className="flex flex-col gap-4">
-                {links.map((link) => (
+                <Link
+                  to="/"
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`text-lg font-semibold transition-all duration-300 ${
+                    location.pathname === "/"
+                      ? "text-primary"
+                      : "text-light hover:text-primary"
+                  }`}
+                >
+                  Home
+                </Link>
+                
+                {/* Mobile Services Menu */}
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2 text-lg font-semibold text-light">
+                    <Briefcase className="w-5 h-5" />
+                    Dienstleistungen
+                  </div>
+                  <div className="pl-7 space-y-2">
+                    {services.map((service) => (
+                      <Link
+                        key={service.title}
+                        to={service.href}
+                        onClick={() => setIsMenuOpen(false)}
+                        className="block text-light-secondary hover:text-primary transition-colors"
+                      >
+                        {service.title}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                {links.slice(1).map((link) => (
                   <Link
                     key={link.path}
                     to={link.path}
