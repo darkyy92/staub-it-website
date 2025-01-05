@@ -20,9 +20,9 @@ export const MobileMenu = ({ isOpen, currentPath, onClose }: MobileMenuProps) =>
       exit={{ opacity: 0, y: -20 }}
       className="fixed inset-x-0 top-[calc(100%+1rem)] mx-4 p-4 rounded-xl md:hidden z-50"
       style={{
-        backgroundColor: 'rgba(26, 26, 26, 0.95)',
-        backdropFilter: 'blur(16px)',
-        WebkitBackdropFilter: 'blur(16px)',
+        backgroundColor: 'rgba(26, 26, 26, 0.98)',
+        backdropFilter: 'blur(24px)',
+        WebkitBackdropFilter: 'blur(24px)',
       }}
     >
       <div className="flex flex-col gap-4">
