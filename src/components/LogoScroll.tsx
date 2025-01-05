@@ -53,7 +53,7 @@ const LogoScroll = () => {
       {/* Grid background */}
       <div className="absolute inset-0 bg-white">
         <div 
-          className="absolute inset-0"
+          className="absolute inset-0 translate-x-3 translate-y-2"
           style={{
             backgroundImage: `
               linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),
