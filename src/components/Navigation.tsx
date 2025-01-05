@@ -32,25 +32,22 @@ const Navigation = () => {
               className="text-primary"
             >
               <path
-                d="M12 2L2 7L12 12L22 7L12 2Z"
+                d="M18.5 10.5C18.5 6.5 15.5 4 12 4C8.5 4 6.5 6.5 6.5 8.5C6.5 9.5 7 10 7.5 10C8.5 10 9 9 9 8.5C9 8 8.5 7.5 8 7.5C7.5 7.5 7 8 7 8.5"
                 stroke="currentColor"
                 strokeWidth="2"
                 strokeLinecap="round"
-                strokeLinejoin="round"
               />
               <path
-                d="M2 17L12 22L22 17"
+                d="M17 8.5C17 8 16.5 7.5 16 7.5C15.5 7.5 15 8 15 8.5C15 9 15.5 10 16.5 10C17 10 17.5 9.5 17.5 8.5C17.5 6.5 15.5 4 12 4"
                 stroke="currentColor"
                 strokeWidth="2"
                 strokeLinecap="round"
-                strokeLinejoin="round"
               />
               <path
-                d="M2 12L12 17L22 12"
+                d="M12 4C8.5 4 6.5 6.5 6.5 8.5C6.5 12.5 9.5 15 12 15C14.5 15 17.5 12.5 17.5 8.5"
                 stroke="currentColor"
                 strokeWidth="2"
                 strokeLinecap="round"
-                strokeLinejoin="round"
               />
             </svg>
             <span className="text-2xl font-bold text-light hover:text-primary transition-colors">
