@@ -35,9 +35,13 @@ const LogoScroll = () => {
               x: {
                 repeat: Infinity,
                 repeatType: "loop",
-                duration: 20,
+                duration: 15,
                 ease: "linear",
               },
+            }}
+            style={{
+              width: "fit-content",
+              minWidth: "100%"
             }}
           >
             {/* First set of logos */}

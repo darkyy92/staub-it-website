@@ -15,6 +15,7 @@ export const LogoRow = ({ logos }: LogoRowProps) => {
         src={logo.src}
         alt={logo.alt}
         className="h-[80px] w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
+        style={{ minWidth: "200px" }}
       />
     </div>
   ));
