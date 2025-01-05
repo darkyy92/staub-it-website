@@ -7,6 +7,7 @@
  * - Fade effects on left and right edges
  * - Responsive design
  * - Hover effects on logos
+ * - Grid texture background
  */
 
 import { motion } from "framer-motion";
@@ -15,7 +16,24 @@ import { logos } from "@/constants/logos";
 
 const LogoScroll = () => {
   return (
-    <section className="py-2 relative overflow-hidden bg-white">
+    <section className="py-2 relative overflow-hidden">
+      {/* Grid background */}
+      <div className="absolute inset-0 bg-white">
+        <div 
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `
+              linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px)
+            `,
+            backgroundSize: '60px 60px'
+          }}
+        />
+      </div>
+
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/90 to-white/80" />
+
       {/* Logo scroll section */}
       <div className="relative">
         {/* Fade overlay left */}
