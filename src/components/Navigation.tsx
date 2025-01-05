@@ -77,7 +77,7 @@ const Navigation = () => {
                 </Link>
               ))}
             </div>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-10">
               <Button 
                 variant="outline"
                 className="bg-transparent text-white hover:bg-primary-dark whitespace-nowrap"
