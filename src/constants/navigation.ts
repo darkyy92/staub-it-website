@@ -1,5 +1,5 @@
 import { NavigationLink, Service } from "@/types/navigation";
-import { Server, Cloud, Shield } from "lucide-react";
+import { Server, Shield, FileText, Cloud, Code, Brain } from "lucide-react";
 
 export const navigationLinks: NavigationLink[] = [
   { path: "/", label: "Home" },
@@ -9,21 +9,39 @@ export const navigationLinks: NavigationLink[] = [
 
 export const services: Service[] = [
   {
-    title: "IT Support",
-    description: "Professionelle IT-Betreuung und Support für Ihr Unternehmen",
-    href: "/services#it-support",
+    title: "IT-Outsourcing",
+    description: "Professionelle IT-Betreuung, Support und Schulungen für dein Unternehmen",
+    href: "/services#it-outsourcing",
     icon: Server
   },
   {
-    title: "Cloud Services",
-    description: "Sichere Cloud-Lösungen und Backup-Systeme",
-    href: "/services#cloud",
+    title: "Cybersecurity",
+    description: "Umfassender Schutz deiner Systeme vor modernen Bedrohungen",
+    href: "/services#security",
+    icon: Shield
+  },
+  {
+    title: "Google Workspace",
+    description: "Professionelle E-Mail, Kalender und Dokumentenverwaltung für dein Team",
+    href: "/services#google-workspace",
+    icon: FileText
+  },
+  {
+    title: "Cloud Backup",
+    description: "Sichere und zuverlässige Datensicherung in der Cloud",
+    href: "/services#cloud-backup",
     icon: Cloud
   },
   {
-    title: "Cybersecurity",
-    description: "Umfassender Schutz vor digitalen Bedrohungen",
-    href: "/services#security",
-    icon: Shield
+    title: "Webdesign",
+    description: "Moderne und responsive Webseiten für deinen professionellen Auftritt",
+    href: "/services#webdesign",
+    icon: Code
+  },
+  {
+    title: "AI-Lösungen",
+    description: "Innovative KI-Integrationen für optimierte Geschäftsprozesse",
+    href: "/services#ai-solutions",
+    icon: Brain
   },
 ];
