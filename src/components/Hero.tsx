@@ -103,7 +103,7 @@ const Hero = () => {
             <motion.button 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="group bg-primary hover:bg-primary-dark text-light px-8 py-4 rounded-lg transition-all duration-300 flex items-center gap-2 text-lg"
+              className="group bg-primary hover:bg-primary-dark text-light px-8 py-4 rounded-full transition-all duration-300 flex items-center gap-2 text-lg"
             >
               Jetzt beraten lassen
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -111,7 +111,7 @@ const Hero = () => {
             <motion.button 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="text-light border-2 border-light/20 hover:border-primary px-8 py-4 rounded-lg transition-all duration-300 backdrop-blur-sm"
+              className="text-light border-2 border-light/20 hover:border-primary px-8 py-4 rounded-full transition-all duration-300 backdrop-blur-sm"
             >
               Unsere Services
             </motion.button>

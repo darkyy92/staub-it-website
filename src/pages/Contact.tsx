@@ -120,7 +120,10 @@ const Contact = () => {
                     required
                   />
                 </div>
-                <Button type="submit" className="w-full">
+                <Button 
+                  type="submit" 
+                  className="w-full rounded-full bg-primary hover:bg-primary-dark text-white transition-colors"
+                >
                   Nachricht senden
                 </Button>
               </form>
