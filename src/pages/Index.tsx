@@ -1,6 +1,7 @@
-import { Shield, Cloud, Server, Code, Brain } from "lucide-react";
 import Hero from "../components/Hero";
 import ServiceCard from "../components/ServiceCard";
+import Testimonials from "../components/Testimonials";
+import { Shield, Cloud, Server, Code, Brain } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Index = () => {
@@ -20,8 +21,7 @@ const Index = () => {
     {
       icon: Cloud,
       title: "Cloud Backup",
-      description:
-        "Sichere und zuverlässige Datensicherung in der Cloud.",
+      description: "Sichere und zuverlässige Datensicherung in der Cloud.",
     },
     {
       icon: Code,
@@ -51,8 +51,7 @@ const Index = () => {
             Unsere Services
           </h2>
           <p className="text-light-secondary max-w-2xl mx-auto">
-            Entdecke unsere umfassenden IT-Dienstleistungen für dein
-            Unternehmen.
+            Entdecke unsere umfassenden IT-Dienstleistungen für dein Unternehmen.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -68,6 +67,7 @@ const Index = () => {
           ))}
         </div>
       </motion.section>
+      <Testimonials />
     </div>
   );
 };
