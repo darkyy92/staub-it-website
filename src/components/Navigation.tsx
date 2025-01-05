@@ -1,12 +1,5 @@
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
 
 const Navigation = () => {
   const location = useLocation();
@@ -15,49 +8,6 @@ const Navigation = () => {
     { path: "/", label: "Home" },
     { path: "/about", label: "Über uns" },
     { path: "/contact", label: "Kontakt" },
-  ];
-
-  const serviceLinks = [
-    {
-      category: "IT Services",
-      items: [
-        { 
-          path: "/services/it-outsourcing", 
-          label: "IT-Outsourcing",
-          description: "Professionelle IT-Betreuung und Support für Ihr Unternehmen"
-        },
-        { 
-          path: "/services/cybersecurity", 
-          label: "Cybersecurity",
-          description: "Umfassender Schutz vor digitalen Bedrohungen"
-        },
-      ]
-    },
-    {
-      category: "Cloud & Backup",
-      items: [
-        { 
-          path: "/services/cloud-backup", 
-          label: "Cloud Backup",
-          description: "Sichere Datenspeicherung in der Cloud"
-        },
-        { 
-          path: "/services/webdesign", 
-          label: "Webdesign",
-          description: "Professionelle Webseiten für Ihren Erfolg"
-        },
-      ]
-    },
-    {
-      category: "Zukunftstechnologien",
-      items: [
-        { 
-          path: "/services/ai-solutions", 
-          label: "AI-Lösungen",
-          description: "Innovative KI-Lösungen für Ihr Business"
-        }
-      ]
-    }
   ];
 
   return (
@@ -95,43 +45,6 @@ const Navigation = () => {
                 {link.label}
               </Link>
             ))}
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-lg font-semibold text-light hover:text-primary transition-all duration-300 bg-transparent">
-                    Services
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent className="bg-white/95 backdrop-blur-md border-none rounded-lg shadow-lg w-[600px] p-6">
-                    <div className="grid grid-cols-3 gap-6">
-                      {serviceLinks.map((category) => (
-                        <div key={category.category}>
-                          <h3 className="font-semibold text-dark mb-3">
-                            {category.category}
-                          </h3>
-                          <ul className="space-y-2">
-                            {category.items.map((service) => (
-                              <li key={service.path}>
-                                <Link
-                                  to={service.path}
-                                  className="block p-2 hover:bg-gray-50 rounded-md transition-colors"
-                                >
-                                  <div className="text-sm font-medium text-dark">
-                                    {service.label}
-                                  </div>
-                                  <p className="text-xs text-gray-500 mt-1">
-                                    {service.description}
-                                  </p>
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
-                    </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
           </div>
         </div>
       </div>
