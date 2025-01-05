@@ -43,3 +43,7 @@
 .text-gradient {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-light;
 }
+
+.glass-button {
+  @apply backdrop-blur-md shadow-lg shadow-black/10 transition-all duration-300;
+}

@@ -51,15 +51,14 @@ const Navigation = () => {
             </div>
             <div className="flex items-center gap-4">
               <Button 
-                variant="default" 
-                className="rounded-full bg-dark text-primary hover:bg-dark-secondary hover:text-primary-light transition-colors"
+                variant="secondary"
+                className="bg-dark/80 text-primary hover:bg-dark hover:text-primary-light"
                 onClick={() => window.open('https://anydesk.com/download', '_blank')}
               >
                 AnyDesk
               </Button>
               <Button 
                 variant="default"
-                className="rounded-full bg-primary hover:bg-primary-dark text-white transition-colors"
                 onClick={() => window.location.href = 'tel:0523471180'}
               >
                 <Phone className="mr-2 h-4 w-4" />
