@@ -10,11 +10,44 @@
  * - Grid texture background
  */
 
-import { motion } from "framer-motion";
+import { motion, useAnimationControls } from "framer-motion";
+import { useEffect, useRef } from "react";
 import { LogoRow } from "./logo/LogoRow";
 import { logos } from "@/constants/logos";
 
 const LogoScroll = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const controls = useAnimationControls();
+
+  useEffect(() => {
+    const updateAnimation = () => {
+      if (containerRef.current) {
+        const scrollWidth = containerRef.current.scrollWidth;
+        const viewportWidth = containerRef.current.offsetWidth;
+        
+        // Calculate the distance needed to scroll one full set of logos
+        const scrollDistance = -(scrollWidth / 5); // Divide by 5 as we have 5 sets
+
+        controls.start({
+          x: [0, scrollDistance],
+          transition: {
+            duration: 30,
+            ease: "linear",
+            repeat: Infinity,
+            repeatType: "loop",
+          },
+        });
+      }
+    };
+
+    updateAnimation();
+    window.addEventListener('resize', updateAnimation);
+    
+    return () => {
+      window.removeEventListener('resize', updateAnimation);
+    };
+  }, [controls]);
+
   return (
     <section className="py-2 relative overflow-hidden">
       {/* Grid background */}
@@ -40,26 +73,15 @@ const LogoScroll = () => {
         <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-white to-transparent z-10" />
 
         {/* Scrolling container */}
-        <div className="flex overflow-hidden">
+        <div className="flex overflow-hidden" ref={containerRef}>
           <motion.div
             className="flex gap-16 items-center py-8"
-            animate={{
-              x: [0, -1920],
-            }}
-            transition={{
-              x: {
-                repeat: Infinity,
-                repeatType: "loop",
-                duration: 30,
-                ease: "linear",
-              },
-            }}
+            animate={controls}
             style={{
               width: "fit-content",
               minWidth: "100%"
             }}
           >
-            {/* Multiple sets of logos for seamless loop */}
             <LogoRow logos={logos} />
             <LogoRow logos={logos} />
             <LogoRow logos={logos} />
