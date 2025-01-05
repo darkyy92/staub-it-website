@@ -59,9 +59,10 @@ const Navigation = () => {
               </Button>
               <Button 
                 variant="default"
+                className="text-white hover:bg-primary-dark"
                 onClick={() => window.location.href = 'tel:0523471180'}
               >
-                <Phone className="mr-2 h-4 w-4" />
+                <Phone className="mr-2 h-4 w-4 text-white" />
                 052 347 11 80
               </Button>
             </div>
