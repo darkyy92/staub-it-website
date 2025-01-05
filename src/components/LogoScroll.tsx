@@ -1,7 +1,7 @@
 /**
  * LogoScroll Component
  * 
- * Displays a continuously scrolling row of customer logos with fade effects on the edges.
+ * Displays a continuously scrolling row of customer logos.
  * Features:
  * - Smooth horizontal scrolling animation
  * - Fade effects on left and right edges
@@ -15,30 +15,7 @@ import { logos } from "@/constants/logos";
 
 const LogoScroll = () => {
   return (
-    <section className="py-32 relative overflow-hidden bg-white">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
-      </div>
-
-      {/* Section header */}
-      <div className="container mx-auto px-6 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-gradient">Unsere Kunden</span>
-          </h2>
-          <p className="text-xl text-dark max-w-2xl mx-auto">
-            Vertrauen auf unsere Expertise
-          </p>
-        </motion.div>
-      </div>
-
+    <section className="py-12 relative overflow-hidden bg-white">
       {/* Logo scroll section */}
       <div className="relative">
         {/* Fade overlay left */}
@@ -58,7 +35,7 @@ const LogoScroll = () => {
               x: {
                 repeat: Infinity,
                 repeatType: "loop",
-                duration: 30,
+                duration: 20,
                 ease: "linear",
               },
             }}
@@ -66,7 +43,8 @@ const LogoScroll = () => {
             {/* First set of logos */}
             <LogoRow logos={logos} />
             
-            {/* Duplicate set for seamless loop */}
+            {/* Duplicate sets for seamless loop */}
+            <LogoRow logos={logos} />
             <LogoRow logos={logos} />
           </motion.div>
         </div>
