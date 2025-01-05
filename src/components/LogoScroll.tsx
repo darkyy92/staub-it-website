@@ -18,29 +18,26 @@ const LogoScroll = () => {
   return (
     <section className="py-2 relative overflow-hidden">
       {/* Grid background */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 bg-white">
         <div 
-          className="absolute inset-0 z-0"
+          className="absolute inset-0"
           style={{
             backgroundImage: `
-              linear-gradient(to right, rgba(0,0,0,0.08) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(0,0,0,0.08) 1px, transparent 1px)
+              linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(0,0,0,0.1) 1px, transparent 1px)
             `,
             backgroundSize: '40px 40px'
           }}
         />
       </div>
 
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white/60 via-white/70 to-white/60 z-10" />
-
       {/* Logo scroll section */}
-      <div className="relative z-20">
+      <div className="relative">
         {/* Fade overlay left */}
-        <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-white to-transparent z-30" />
+        <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-white to-transparent z-10" />
         
         {/* Fade overlay right */}
-        <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-white to-transparent z-30" />
+        <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-white to-transparent z-10" />
 
         {/* Scrolling container */}
         <div className="flex overflow-hidden">
