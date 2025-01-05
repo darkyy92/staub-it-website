@@ -16,7 +16,7 @@ const HeroContent = () => {
         className="mb-8"
       >
         <motion.h1 
-          className="text-5xl md:text-7xl font-bold mb-6"
+          className="text-5xl md:text-7xl font-bold mb-6 flex flex-col gap-2"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
@@ -33,15 +33,17 @@ const HeroContent = () => {
             }}
           >
             Innovative IT
-          </motion.span>{" "}
-          <span className="text-light">für KMU und</span>{" "}
-          <motion.span 
-            className="inline-block text-light"
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            Bildung
           </motion.span>
+          <span className="text-light">
+            für KMU und{" "}
+            <motion.span 
+              className="inline-block text-light"
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              Bildung
+            </motion.span>
+          </span>
         </motion.h1>
         <motion.p 
           className="text-xl md:text-2xl text-light-secondary leading-relaxed"
