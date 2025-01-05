@@ -14,7 +14,7 @@ const ServiceCard = ({ title, description, icon: Icon }: ServiceCardProps) => {
       className="glass-card p-8 rounded-xl hover:border-primary/50 transition-colors duration-300 group h-[250px] w-full"
     >
       <div className="flex flex-col h-full">
-        <div className="flex items-start gap-6">
+        <div className="flex items-center gap-6">
           <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors duration-300">
             <Icon className="w-8 h-8 text-primary" />
           </div>
