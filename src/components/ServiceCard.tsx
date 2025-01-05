@@ -18,7 +18,7 @@ const ServiceCard = ({ title, description, icon: Icon }: ServiceCardProps) => {
           <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors duration-300">
             <Icon className="w-8 h-8 text-primary" />
           </div>
-          <h3 className="text-2xl font-bold text-light line-clamp-1">{title}</h3>
+          <h3 className="text-2xl font-bold text-light break-words">{title}</h3>
         </div>
         <div className="mt-6 flex-1 overflow-hidden">
           <p className="text-light-secondary text-lg leading-relaxed line-clamp-4">{description}</p>
