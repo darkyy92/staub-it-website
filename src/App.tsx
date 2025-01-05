@@ -15,17 +15,19 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <div className="min-h-screen bg-dark">
+      <div className="min-h-screen bg-dark flex flex-col">
         <Toaster />
         <Sonner />
         <BrowserRouter>
           <Navigation />
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
+          <main className="flex-grow">
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </main>
           <Footer />
         </BrowserRouter>
       </div>
