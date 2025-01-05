@@ -37,12 +37,11 @@
 }
 
 .glass-card {
-  @apply bg-dark-secondary/80;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
-  perspective: 1000px;
+  background: rgba(42, 42, 42, 0.8);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  will-change: transform;
+  transform: translateZ(0);
   @apply shadow-xl shadow-black/30 border border-gray-800/20;
 }
 
