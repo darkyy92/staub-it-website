@@ -18,14 +18,14 @@ const Navigation = () => {
       className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-[80%] xl:max-w-[1280px]"
     >
       <div className="glass-card rounded-full px-8 py-4 border-gray-800/50">
-        <div className="flex items-center justify-between md:justify-center space-x-12">
+        <div className="flex items-center justify-between md:justify-center gap-8 md:gap-12">
           <Link 
             to="/" 
             className="text-2xl font-bold text-light hover:text-primary transition-colors"
           >
             Staub IT
           </Link>
-          <div className="hidden md:flex items-center space-x-10">
+          <div className="hidden md:flex items-center gap-10">
             {links.map((link) => (
               <Link
                 key={link.path}
