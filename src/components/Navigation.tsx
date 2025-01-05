@@ -15,13 +15,13 @@ const Navigation = () => {
     <motion.nav
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-[80%] xl:max-w-[1280px]"
+      className="fixed top-0 left-0 right-0 z-50 flex justify-center w-full px-4 pt-6"
     >
-      <div className="glass-card rounded-full px-8 py-4 border-gray-800/50">
-        <div className="relative flex items-center justify-center w-full">
+      <div className="glass-card rounded-full px-8 py-4 border-gray-800/50 w-full max-w-7xl mx-auto">
+        <div className="flex items-center justify-between w-full">
           <Link 
             to="/" 
-            className="absolute left-8 text-2xl font-bold text-light hover:text-primary transition-colors"
+            className="text-2xl font-bold text-light hover:text-primary transition-colors"
           >
             Staub IT
           </Link>
