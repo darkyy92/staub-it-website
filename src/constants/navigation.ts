@@ -17,31 +17,31 @@ export const services: Service[] = [
   {
     title: "Cybersecurity",
     description: "Umfassender Schutz deiner Systeme vor modernen Bedrohungen",
-    href: "/services#security",
+    href: "/services/cybersecurity",
     icon: Shield
   },
   {
     title: "Google Workspace",
     description: "Professionelle E-Mail, Kalender und Dokumentenverwaltung für dein Team",
-    href: "/services#google-workspace",
+    href: "/services/google-workspace",
     icon: FileText
   },
   {
     title: "Cloud Backup",
     description: "Sichere und zuverlässige Datensicherung in der Cloud",
-    href: "/services#cloud-backup",
+    href: "/services/cloud-backup",
     icon: Cloud
   },
   {
     title: "Webdesign",
     description: "Moderne und responsive Webseiten für deinen professionellen Auftritt",
-    href: "/services#webdesign",
+    href: "/services/webdesign",
     icon: Code
   },
   {
     title: "AI-Lösungen",
     description: "Innovative KI-Integrationen für optimierte Geschäftsprozesse",
-    href: "/services#ai-solutions",
+    href: "/services/ai-solutions",
     icon: Brain
   },
 ];

@@ -10,6 +10,11 @@ import Services from "./pages/Services";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ITOutsourcing from "./pages/ITOutsourcing";
+import Cybersecurity from "./pages/Cybersecurity";
+import GoogleWorkspace from "./pages/GoogleWorkspace";
+import CloudBackup from "./pages/CloudBackup";
+import Webdesign from "./pages/Webdesign";
+import AISolutions from "./pages/AISolutions";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +33,11 @@ const App = () => (
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/services/it-outsourcing" element={<ITOutsourcing />} />
+              <Route path="/services/cybersecurity" element={<Cybersecurity />} />
+              <Route path="/services/google-workspace" element={<GoogleWorkspace />} />
+              <Route path="/services/cloud-backup" element={<CloudBackup />} />
+              <Route path="/services/webdesign" element={<Webdesign />} />
+              <Route path="/services/ai-solutions" element={<AISolutions />} />
             </Routes>
           </main>
           <Footer />
