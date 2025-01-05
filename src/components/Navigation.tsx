@@ -21,9 +21,16 @@ const Navigation = () => {
         <div className="flex items-center justify-between w-full">
           <Link 
             to="/" 
-            className="text-2xl font-bold text-light hover:text-primary transition-colors"
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
-            Staub IT
+            <img 
+              src="/lovable-uploads/03c9638f-4310-4299-921f-e2fbce62352d.png" 
+              alt="Staub IT Logo" 
+              className="h-8 w-auto"
+            />
+            <span className="text-2xl font-bold text-light hover:text-primary transition-colors">
+              Staub IT
+            </span>
           </Link>
           <div className="hidden md:flex items-center gap-10">
             {links.map((link) => (
