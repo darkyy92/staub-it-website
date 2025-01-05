@@ -38,14 +38,14 @@ const Index = () => {
   ];
 
   return (
-    <main className="bg-dark">
+    <div className="min-h-screen bg-dark flex flex-col">
       <Hero />
       
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="py-32 container mx-auto px-6"
+        className="py-32 container mx-auto px-6 bg-dark"
       >
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -72,7 +72,7 @@ const Index = () => {
       </motion.section>
       
       <Testimonials />
-    </main>
+    </div>
   );
 };
 
