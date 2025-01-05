@@ -51,7 +51,7 @@ const HeroContent = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
         >
-          Von der Cloud bis zur Hardware – alles aus einer Hand.
+          Von der Cloud bis zur Hardware – alles für dich aus einer Hand.
         </motion.p>
       </motion.div>
 

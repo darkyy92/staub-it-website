@@ -5,13 +5,13 @@ const testimonials = [
   {
     name: "Michael Schmidt",
     company: "TechCorp GmbH",
-    text: "Staub IT hat unsere IT-Infrastruktur komplett modernisiert. Der Service ist erstklassig und das Team immer hilfsbereit.",
+    text: "Staub IT hat meine IT-Infrastruktur komplett modernisiert. Der Service ist erstklassig und das Team immer hilfsbereit.",
     rating: 5,
   },
   {
     name: "Sarah Weber",
     company: "Digital Solutions AG",
-    text: "Die AI-Lösungen von Staub IT haben unsere Prozesse revolutioniert. Wir sind begeistert von der Expertise und Professionalität.",
+    text: "Die AI-Lösungen von Staub IT haben meine Prozesse revolutioniert. Ich bin begeistert von der Expertise und Professionalität.",
     rating: 5,
   },
   {
@@ -41,10 +41,10 @@ const Testimonials = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-gradient">Was unsere Kunden sagen</span>
+            <span className="text-gradient">Was andere über uns sagen</span>
           </h2>
           <p className="text-xl text-light-secondary max-w-2xl mx-auto">
-            Erfahre, wie wir anderen Unternehmen helfen konnten
+            Erfahre, wie wir dir und anderen helfen konnten
           </p>
         </motion.div>
 
