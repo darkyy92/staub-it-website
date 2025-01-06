@@ -1,10 +1,13 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const location = useLocation();
+  const isServicePage = location.pathname.startsWith('/services/');
+
   return (
-    <footer className="bg-dark-secondary mt-8 border-t border-gray-800">
+    <footer className={`bg-dark-secondary ${!isServicePage ? 'mt-8' : ''} border-t border-gray-800`}>
       <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
