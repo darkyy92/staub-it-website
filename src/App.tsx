@@ -15,6 +15,7 @@ import GoogleWorkspace from "./pages/GoogleWorkspace";
 import CloudBackup from "./pages/CloudBackup";
 import Webdesign from "./pages/Webdesign";
 import AISolutions from "./pages/AISolutions";
+import Education from "./pages/Education";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +39,7 @@ const App = () => (
               <Route path="/services/cloud-backup" element={<CloudBackup />} />
               <Route path="/services/webdesign" element={<Webdesign />} />
               <Route path="/services/ai-solutions" element={<AISolutions />} />
+              <Route path="/services/education" element={<Education />} />
             </Routes>
           </main>
           <Footer />

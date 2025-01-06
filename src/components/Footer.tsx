@@ -72,6 +72,7 @@ const Footer = () => {
               <li className="text-light-secondary">Cloud Backup</li>
               <li className="text-light-secondary">Webdesign</li>
               <li className="text-light-secondary">AI-Lösungen</li>
+              <li className="text-light-secondary">Education</li>
             </ul>
           </motion.div>
 

@@ -1,5 +1,5 @@
 import { NavigationLink, Service } from "@/types/navigation";
-import { Server, Shield, FileText, Cloud, Code, Brain } from "lucide-react";
+import { Server, Shield, FileText, Cloud, Code, Brain, GraduationCap } from "lucide-react";
 
 export const navigationLinks: NavigationLink[] = [
   { path: "/about", label: "Über uns" },
@@ -43,4 +43,10 @@ export const services: Service[] = [
     href: "/services/ai-solutions",
     icon: Brain
   },
+  {
+    title: "Education",
+    description: "IT-Lösungen für moderne Bildungseinrichtungen",
+    href: "/services/education",
+    icon: GraduationCap
+  }
 ];
