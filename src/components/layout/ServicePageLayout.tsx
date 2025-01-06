@@ -9,7 +9,7 @@ const ServicePageLayout = ({ children }: ServicePageLayoutProps) => {
   return (
     <div className="min-h-screen flex flex-col bg-dark">
       <GridBackground />
-      <div className="relative flex-1">
+      <div className="relative flex-1 flex flex-col">
         {children}
       </div>
     </div>
