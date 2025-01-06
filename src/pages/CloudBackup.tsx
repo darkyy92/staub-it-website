@@ -6,7 +6,7 @@ import ServicePageLayout from "@/components/layout/ServicePageLayout";
 const CloudBackup = () => {
   return (
     <ServicePageLayout>
-      <div className="container mx-auto px-6 sm:px-4 pt-32 pb-32">
+      <div className="container mx-auto px-6 sm:px-4 pt-40 pb-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
