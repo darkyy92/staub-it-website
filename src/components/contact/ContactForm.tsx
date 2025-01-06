@@ -122,7 +122,7 @@ export const ContactForm = () => {
         </div>
         <Button 
           type="submit" 
-          className="w-full"
+          className="w-full text-white"
           disabled={isSubmitting}
         >
           {isSubmitting ? "Wird gesendet..." : "Nachricht senden"}
