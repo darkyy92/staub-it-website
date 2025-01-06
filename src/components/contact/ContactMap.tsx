@@ -7,8 +7,8 @@ const mapContainerStyle = {
 };
 
 const center = {
-  lat: 47.4772,  // Coordinates for Sirnach
-  lng: 8.9975,
+  lat: 47.47723,  // Updated coordinates for Frauenfelderstrasse 39
+  lng: 8.99753,   // Updated coordinates for Sirnach
 };
 
 const mapOptions = {
