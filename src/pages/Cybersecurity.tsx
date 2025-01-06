@@ -1,15 +1,16 @@
 import { motion } from "framer-motion";
 import ServiceCard from "@/components/ServiceCard";
 import { Shield, Lock, Eye, Bell } from "lucide-react";
+import ServicePageLayout from "@/components/layout/ServicePageLayout";
 
 const Cybersecurity = () => {
   return (
-    <div className="min-h-screen bg-dark">
+    <ServicePageLayout>
       <div className="container mx-auto px-6 sm:px-4 pt-32 pb-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="max-w-4xl mx-auto text-left"
+          className="max-w-4xl mx-auto relative z-10"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-light mb-6">
             Cybersecurity
@@ -42,7 +43,7 @@ const Cybersecurity = () => {
           </div>
         </motion.div>
       </div>
-    </div>
+    </ServicePageLayout>
   );
 };
 
