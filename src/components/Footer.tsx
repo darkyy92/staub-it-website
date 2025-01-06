@@ -67,12 +67,41 @@ const Footer = () => {
           >
             <h3 className="text-xl font-semibold text-light">Services</h3>
             <ul className="space-y-2">
-              <li className="text-light-secondary">IT-Outsourcing</li>
-              <li className="text-light-secondary">Cybersecurity</li>
-              <li className="text-light-secondary">Cloud Backup</li>
-              <li className="text-light-secondary">Webdesign</li>
-              <li className="text-light-secondary">AI-Lösungen</li>
-              <li className="text-light-secondary">Education</li>
+              <li>
+                <Link to="/services/it-outsourcing" className="text-light-secondary hover:text-primary transition-colors">
+                  IT-Outsourcing
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/cybersecurity" className="text-light-secondary hover:text-primary transition-colors">
+                  Cybersecurity
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/google-workspace" className="text-light-secondary hover:text-primary transition-colors">
+                  Google Workspace
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/cloud-backup" className="text-light-secondary hover:text-primary transition-colors">
+                  Cloud Backup
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/webdesign" className="text-light-secondary hover:text-primary transition-colors">
+                  Webdesign
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/ai-solutions" className="text-light-secondary hover:text-primary transition-colors">
+                  AI-Lösungen
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/education" className="text-light-secondary hover:text-primary transition-colors">
+                  Education
+                </Link>
+              </li>
             </ul>
           </motion.div>
 
