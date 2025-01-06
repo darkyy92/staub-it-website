@@ -47,7 +47,7 @@ const mapOptions = {
 export const ContactMap = () => {
   return (
     <div className="glass-card rounded-xl border-dark-secondary/30 overflow-hidden">
-      <LoadScript googleMapsApiKey="YOUR_GOOGLE_MAPS_API_KEY">
+      <LoadScript googleMapsApiKey="AIzaSyC9_3wIGBLT2Ipb11rQ9hKIgyCgAtKZ3AQ">
         <GoogleMap
           mapContainerStyle={mapContainerStyle}
           center={center}
