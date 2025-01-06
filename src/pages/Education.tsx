@@ -6,12 +6,15 @@ import ServiceCard from "@/components/ServiceCard";
 const Education = () => {
   return (
     <ServicePageLayout>
-      <div className="container mx-auto px-6 pt-32 pb-16">
+      <div className="container mx-auto px-6 py-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
+          <span className="text-primary font-semibold mb-4 block">
+            Bildung & Technologie
+          </span>
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-light">
             IT-Lösungen für <span className="text-gradient">Bildungseinrichtungen</span>
           </h1>
