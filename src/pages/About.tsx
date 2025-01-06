@@ -4,14 +4,13 @@ import ServicePageLayout from "@/components/layout/ServicePageLayout";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-dark">
-      <ServicePageLayout>
-        <div className="container mx-auto px-6 pt-40">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="max-w-4xl mx-auto pb-32"
-          >
+    <ServicePageLayout>
+      <div className="container mx-auto px-6 pt-40 pb-32">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="max-w-4xl mx-auto"
+        >
           <h1 className="text-4xl font-bold text-light mb-8 text-center">
             Über Staub IT
           </h1>
@@ -146,10 +145,9 @@ const About = () => {
               </ul>
             </motion.div>
           </div>
-          </motion.div>
-        </div>
-      </ServicePageLayout>
-    </div>
+        </motion.div>
+      </div>
+    </ServicePageLayout>
   );
 };
 
