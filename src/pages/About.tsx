@@ -47,15 +47,8 @@ const About = () => {
               <h3 className="text-2xl font-semibold text-light mb-4">
                 Wir stehen für Innovation
               </h3>
-              <p className="text-light-secondary mb-8">
-                Stets mit der neusten Technik vertraut und immer auf der Suche nach dem gewissen Etwas. Die Technologie entwickelt sich rasant – profitiere von unserer Neugier, unserer praktischen Erfahrung und unserem Fachwissen.
-              </p>
-
-              <h3 className="text-2xl font-semibold text-light mb-4">
-                Wir stehen für transparente Preisgestaltung
-              </h3>
               <p className="text-light-secondary">
-                Du bezahlst nur, wofür du uns auch wirklich brauchst. Fixe Wartungsverträge, SLA oder Notfallzuschläge gibt es bei uns nicht. Jeder Kunde hat bei uns höchste Priorität.
+                Stets mit der neusten Technik vertraut und immer auf der Suche nach dem gewissen Etwas. Die Technologie entwickelt sich rasant – profitiere von unserer Neugier, unserer praktischen Erfahrung und unserem Fachwissen.
               </p>
             </motion.div>
           </div>
