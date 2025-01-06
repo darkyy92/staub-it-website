@@ -4,7 +4,7 @@ import ServicePageLayout from "@/components/layout/ServicePageLayout";
 const Prices = () => {
   return (
     <ServicePageLayout>
-      <div className="container mx-auto px-6 py-32 h-full relative z-10">
+      <div className="container mx-auto px-6 py-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -26,9 +26,9 @@ const Prices = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass-card p-8 rounded-xl flex items-center"
+            className="glass-card p-8 rounded-xl"
           >
-            <ul className="space-y-4 w-full">
+            <ul className="space-y-4">
               <li className="flex items-center gap-3">
                 <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
                   <svg className="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
@@ -78,44 +78,42 @@ const Prices = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="glass-card p-8 rounded-xl flex items-center"
+            className="glass-card p-8 rounded-xl"
           >
-            <div className="w-full">
-              <div className="mb-8">
-                <h3 className="text-xl text-light-secondary mb-4">STUNDENSATZ</h3>
-                <div className="flex items-baseline gap-1">
-                  <span className="text-light text-2xl">CHF</span>
-                  <span className="text-primary text-5xl font-bold">229</span>
-                  <span className="text-light text-2xl">.-</span>
-                </div>
+            <div className="mb-8">
+              <h3 className="text-xl text-light-secondary mb-4">STUNDENSATZ</h3>
+              <div className="flex items-baseline gap-1">
+                <span className="text-light text-2xl">CHF</span>
+                <span className="text-primary text-5xl font-bold">229</span>
+                <span className="text-light text-2xl">.-</span>
               </div>
-              <ul className="space-y-4">
-                <li className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
-                    <svg className="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                    </svg>
-                  </div>
-                  <span className="text-light-secondary">Vor Ort ab 60 min</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
-                    <svg className="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                    </svg>
-                  </div>
-                  <span className="text-light-secondary">Abrechnung im Viertelstundentakt</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
-                    <svg className="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                    </svg>
-                  </div>
-                  <span className="text-light-secondary">Exklusiv Anfahrt</span>
-                </li>
-              </ul>
             </div>
+            <ul className="space-y-4">
+              <li className="flex items-center gap-3">
+                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
+                  <svg className="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                  </svg>
+                </div>
+                <span className="text-light-secondary">Vor Ort ab 60 min</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
+                  <svg className="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                  </svg>
+                </div>
+                <span className="text-light-secondary">Abrechnung im Viertelstundentakt</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
+                  <svg className="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                  </svg>
+                </div>
+                <span className="text-light-secondary">Exklusiv Anfahrt</span>
+              </li>
+            </ul>
           </motion.div>
 
           {/* Right Card */}
@@ -124,52 +122,50 @@ const Prices = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
-            className="glass-card p-8 rounded-xl flex items-center"
+            className="glass-card p-8 rounded-xl"
           >
-            <div className="w-full">
-              <div className="mb-8">
-                <h3 className="text-xl text-light-secondary mb-4">WEGKOSTEN</h3>
-                <div className="flex items-baseline gap-1">
-                  <span className="text-light text-2xl">CHF</span>
-                  <span className="text-primary text-5xl font-bold">1.90</span>
-                  <span className="text-light text-2xl">/ km</span>
-                </div>
+            <div className="mb-8">
+              <h3 className="text-xl text-light-secondary mb-4">WEGKOSTEN</h3>
+              <div className="flex items-baseline gap-1">
+                <span className="text-light text-2xl">CHF</span>
+                <span className="text-primary text-5xl font-bold">1.90</span>
+                <span className="text-light text-2xl">/ km</span>
               </div>
-              <ul className="space-y-4">
-                <li className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
-                    <svg className="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                    </svg>
-                  </div>
-                  <span className="text-light-secondary">Mindestens 89</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
-                    <svg className="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                    </svg>
-                  </div>
-                  <span className="text-light-secondary">Pauschale Winterthur 89</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
-                    <svg className="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                    </svg>
-                  </div>
-                  <span className="text-light-secondary">Pauschale ZH 149</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
-                    <svg className="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                    </svg>
-                  </div>
-                  <span className="text-light-secondary">Pauschale SH 119</span>
-                </li>
-              </ul>
             </div>
+            <ul className="space-y-4">
+              <li className="flex items-center gap-3">
+                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
+                  <svg className="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                  </svg>
+                </div>
+                <span className="text-light-secondary">Mindestens 89</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
+                  <svg className="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                  </svg>
+                </div>
+                <span className="text-light-secondary">Pauschale Winterthur 89</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
+                  <svg className="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                  </svg>
+                </div>
+                <span className="text-light-secondary">Pauschale ZH 149</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
+                  <svg className="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                  </svg>
+                </div>
+                <span className="text-light-secondary">Pauschale SH 119</span>
+              </li>
+            </ul>
           </motion.div>
         </div>
       </div>
