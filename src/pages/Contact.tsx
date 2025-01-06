@@ -22,19 +22,17 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const templateParams = {
-        to_email: 'hello@staub-it.ch',
-        from_name: formData.name,
-        from_email: formData.email,
-        phone: formData.phone,
-        message: formData.message,
-      };
-
       await emailjs.send(
-        'YOUR_SERVICE_ID',  // You'll need to replace this
-        'YOUR_TEMPLATE_ID', // You'll need to replace this
-        templateParams,
-        'YOUR_PUBLIC_KEY'   // You'll need to replace this
+        'service_1onplgm',
+        'template_o16txxf',
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+          to_email: 'hello@staub-it.ch',
+        },
+        '-1c0cLJt9lxrW4Dj-'
       );
 
       toast({
@@ -43,6 +41,7 @@ const Contact = () => {
       });
       setFormData({ name: "", email: "", phone: "", message: "" });
     } catch (error) {
+      console.error('Failed to send email:', error);
       toast({
         title: "Fehler",
         description: "Deine Nachricht konnte nicht gesendet werden. Bitte versuche es später noch einmal.",
