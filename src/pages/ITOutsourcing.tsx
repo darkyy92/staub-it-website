@@ -6,11 +6,11 @@ import ServicePageLayout from "@/components/layout/ServicePageLayout";
 const ITOutsourcing = () => {
   return (
     <ServicePageLayout>
-      <div className="container mx-auto px-6 sm:px-4 pt-24 pb-0 relative z-10">
+      <div className="container mx-auto px-6 sm:px-4 pt-32 pb-8 mt-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="max-w-4xl mx-auto"
+          className="max-w-4xl mx-auto relative z-10"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-light mb-6 px-4">
             IT-Outsourcing
@@ -19,7 +19,7 @@ const ITOutsourcing = () => {
             Professionelle IT-Betreuung, Support und Schulungen für dein Unternehmen. Wir kümmern uns um deine gesamte IT-Infrastruktur, damit du dich auf dein Kerngeschäft konzentrieren kannst.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
             <ServiceCard
               icon={Server}
               title="IT-Support"
