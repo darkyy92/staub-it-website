@@ -17,7 +17,6 @@ import Webdesign from "./pages/Webdesign";
 import AISolutions from "./pages/AISolutions";
 import Education from "./pages/Education";
 import Prices from "./pages/Prices";
-import Privacy from "./pages/Privacy";
 
 const queryClient = new QueryClient();
 
@@ -43,7 +42,6 @@ const App = () => (
               <Route path="/services/ai-solutions" element={<AISolutions />} />
               <Route path="/services/education" element={<Education />} />
               <Route path="/prices" element={<Prices />} />
-              <Route path="/privacy" element={<Privacy />} />
             </Routes>
           </main>
           <Footer />

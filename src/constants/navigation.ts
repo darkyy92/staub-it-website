@@ -5,7 +5,6 @@ export const navigationLinks: NavigationLink[] = [
   { path: "/prices", label: "Preise" },
   { path: "/about", label: "Über uns" },
   { path: "/contact", label: "Kontakt" },
-  { path: "/privacy", label: "Datenschutz" },
 ];
 
 export const services: Service[] = [
