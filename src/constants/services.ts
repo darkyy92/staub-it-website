@@ -1,5 +1,5 @@
 import { Service } from "@/types/service";
-import { Server, Shield, FileText, Cloud, Code, Brain, GraduationCap } from "lucide-react";
+import { Server, Shield, FileText, Cloud, Code, Brain } from "lucide-react";
 
 export const services: Service[] = [
   {
@@ -42,12 +42,5 @@ export const services: Service[] = [
     description:
       "Innovative KI-Integrationen für optimierte Geschäftsprozesse.",
     path: "ai-solutions"
-  },
-  {
-    icon: GraduationCap,
-    title: "Education",
-    description:
-      "IT-Lösungen für moderne Bildungseinrichtungen.",
-    path: "education"
   }
 ];
