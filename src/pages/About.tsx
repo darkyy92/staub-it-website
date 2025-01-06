@@ -70,19 +70,19 @@ const About = () => {
             <h2 className="text-3xl font-bold text-light mb-12 text-center">Unser Team</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
               <TeamMember
-                image="/lovable-uploads/1046e0e3-33cd-4e29-bef3-62fd04f566b7.png"
+                image="/lovable-uploads/d0fbdf85-3864-40b6-8647-5ed15c80dc9c.png"
                 name="Joël Staub"
                 role="Gründer"
                 delay={0.2}
               />
               <TeamMember
-                image="/lovable-uploads/1046e0e3-33cd-4e29-bef3-62fd04f566b7.png"
+                image="/lovable-uploads/caca66d0-a9bf-4682-b66b-c5f8a4fb4915.png"
                 name="Thierry Staub"
                 role="IT Consultant & Web Design"
                 delay={0.4}
               />
               <TeamMember
-                image="/lovable-uploads/1046e0e3-33cd-4e29-bef3-62fd04f566b7.png"
+                image="/lovable-uploads/847edaaf-de19-414f-9556-8e32c18dc9ed.png"
                 name="Gabriela Cattaneo"
                 role="Web Design"
                 delay={0.6}
@@ -90,19 +90,19 @@ const About = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               <TeamMember
-                image="/lovable-uploads/1046e0e3-33cd-4e29-bef3-62fd04f566b7.png"
+                image="/lovable-uploads/3db257cd-5cef-489a-a09a-e24e8732ee94.png"
                 name="Nadja Staub"
                 role="Administration"
                 delay={0.8}
               />
               <TeamMember
-                image="/lovable-uploads/1046e0e3-33cd-4e29-bef3-62fd04f566b7.png"
+                image="/lovable-uploads/c4c03475-416c-4cbf-94d7-dfe488710b4e.png"
                 name="Mölang"
                 role="Security"
                 delay={1.0}
               />
               <TeamMember
-                image="/lovable-uploads/1046e0e3-33cd-4e29-bef3-62fd04f566b7.png"
+                image="/lovable-uploads/bee82b60-bc44-44cc-9f8b-c7e202430ec0.png"
                 name="Shadow"
                 role="Security"
                 delay={1.2}
