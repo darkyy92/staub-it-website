@@ -8,7 +8,7 @@ export const ContactMap = () => {
   return (
     <div className="glass-card rounded-xl border-dark-secondary/30 overflow-hidden">
       <iframe
-        src="https://www.google.com/maps/embed/v1/place?q=Frauenfelderstrasse+39,+8370+Sirnach,+Schweiz&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+        src="https://www.google.com/maps/embed/v1/place?q=Frauenfelderstrasse+39,+8370+Sirnach,+Schweiz&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&mode=dark"
         style={mapContainerStyle}
         frameBorder="0"
         allowFullScreen
