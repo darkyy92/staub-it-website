@@ -32,8 +32,8 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-dark pt-32">
-      <div className="container mx-auto px-6">
+    <div className="min-h-screen bg-dark">
+      <div className="container mx-auto px-6 pt-40 pb-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
