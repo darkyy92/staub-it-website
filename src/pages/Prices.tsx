@@ -10,10 +10,8 @@ const Prices = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            <span>Einfache, </span>
-            <span className="text-primary">transparente</span>
-            <span> Preise</span>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+            Einfache, transparente Preise
           </h1>
           <p className="text-xl text-light-secondary">
             Alle Preise in CHF exkl. MwSt.
