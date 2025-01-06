@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { MapPin, Phone, Mail } from "lucide-react";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -14,14 +15,42 @@ const Contact = () => {
     phone: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Nachricht gesendet",
-      description: "Wir werden uns in Kürze bei dir melden.",
-    });
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    setIsSubmitting(true);
+
+    try {
+      const templateParams = {
+        to_email: 'hello@staub-it.ch',
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+      };
+
+      await emailjs.send(
+        'YOUR_SERVICE_ID',  // You'll need to replace this
+        'YOUR_TEMPLATE_ID', // You'll need to replace this
+        templateParams,
+        'YOUR_PUBLIC_KEY'   // You'll need to replace this
+      );
+
+      toast({
+        title: "Nachricht gesendet",
+        description: "Wir werden uns in Kürze bei dir melden.",
+      });
+      setFormData({ name: "", email: "", phone: "", message: "" });
+    } catch (error) {
+      toast({
+        title: "Fehler",
+        description: "Deine Nachricht konnte nicht gesendet werden. Bitte versuche es später noch einmal.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -122,8 +151,9 @@ const Contact = () => {
                 <Button 
                   type="submit" 
                   className="w-full"
+                  disabled={isSubmitting}
                 >
-                  Nachricht senden
+                  {isSubmitting ? "Wird gesendet..." : "Nachricht senden"}
                 </Button>
               </form>
             </div>
