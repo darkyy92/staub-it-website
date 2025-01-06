@@ -27,8 +27,8 @@ export const TeamMember = ({ image, name, role, delay = 0 }: TeamMemberProps) =>
             alt={name}
             className="w-full h-full object-cover rounded-lg"
           />
+          <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
         </Avatar>
-        <div className="absolute inset-0 rounded-lg bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </motion.div>
       <h3 className="text-xl font-semibold text-light mb-1 group-hover:text-primary transition-colors duration-300">{name}</h3>
       <p className="text-light-secondary text-sm uppercase tracking-wider">{role}</p>
