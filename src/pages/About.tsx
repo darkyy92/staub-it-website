@@ -139,8 +139,8 @@ const About = () => {
               <ul className="text-light-secondary space-y-2">
                 <li>• Persönliche Betreuung</li>
                 <li>• Massgeschneiderte Lösungen</li>
-                <li>• 24/7 Support</li>
-                <li>• Faire Preise</li>
+                <li>• Premium Support</li>
+                <li>• Transparente Preisgestaltung</li>
               </ul>
             </motion.div>
           </div>
