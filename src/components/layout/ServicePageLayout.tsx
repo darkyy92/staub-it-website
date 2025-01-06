@@ -9,7 +9,9 @@ const ServicePageLayout = ({ children }: ServicePageLayoutProps) => {
   return (
     <div className="relative min-h-screen bg-dark">
       <GridBackground />
-      {children}
+      <div className="pb-16">
+        {children}
+      </div>
     </div>
   );
 };
