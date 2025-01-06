@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Tablet, Shield, Cloud, Laptop, Brain, GraduationCap } from "lucide-react";
 import ServicePageLayout from "@/components/layout/ServicePageLayout";
+import ServiceCard from "@/components/ServiceCard";
 
 const Education = () => {
   return (
@@ -19,69 +20,27 @@ const Education = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="glass-card p-8 rounded-xl"
-          >
-            <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
-              <Tablet className="w-8 h-8 text-primary" />
-            </div>
-            <h3 className="text-2xl font-bold text-light mb-4">iPad Integration</h3>
-            <p className="text-light-secondary">
-              Nahtlose Integration von iPads in den Unterricht mit professioneller Einrichtung und Support.
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="glass-card p-8 rounded-xl"
-          >
-            <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
-              <Shield className="w-8 h-8 text-primary" />
-            </div>
-            <h3 className="text-2xl font-bold text-light mb-4">Mobile Device Management</h3>
-            <p className="text-light-secondary">
-              Effiziente Verwaltung aller Geräte mit Jamf Pro/School für maximale Sicherheit und Kontrolle.
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
-            className="glass-card p-8 rounded-xl"
-          >
-            <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
-              <Cloud className="w-8 h-8 text-primary" />
-            </div>
-            <h3 className="text-2xl font-bold text-light mb-4">Cloud-Lösungen</h3>
-            <p className="text-light-secondary">
-              Sichere Cloud-Speicherung und Zusammenarbeit für Schüler und Lehrkräfte.
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.6 }}
-            className="glass-card p-8 rounded-xl"
-          >
-            <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
-              <GraduationCap className="w-8 h-8 text-primary" />
-            </div>
-            <h3 className="text-2xl font-bold text-light mb-4">E-Learning Plattformen</h3>
-            <p className="text-light-secondary">
-              Implementation und Betreuung von modernen Lernplattformen für interaktiven Unterricht.
-            </p>
-          </motion.div>
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          <ServiceCard
+            icon={Tablet}
+            title="iPad Integration"
+            description="Nahtlose Integration von iPads in den Unterricht mit professioneller Einrichtung und Support."
+          />
+          <ServiceCard
+            icon={Shield}
+            title="Mobile Device Management"
+            description="Effiziente Verwaltung aller Geräte mit Jamf Pro/School für maximale Sicherheit und Kontrolle."
+          />
+          <ServiceCard
+            icon={Cloud}
+            title="Cloud-Lösungen"
+            description="Sichere Cloud-Speicherung und Zusammenarbeit für Schüler und Lehrkräfte."
+          />
+          <ServiceCard
+            icon={GraduationCap}
+            title="E-Learning Plattformen"
+            description="Implementation und Betreuung von modernen Lernplattformen für interaktiven Unterricht."
+          />
         </div>
 
         <div className="max-w-3xl mx-auto">
