@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Tablet, Shield, Cloud, Laptop, Brain } from "lucide-react";
+import { Tablet, Shield, Cloud, Laptop, Brain, GraduationCap } from "lucide-react";
 import ServicePageLayout from "@/components/layout/ServicePageLayout";
 
 const Education = () => {
@@ -19,7 +19,7 @@ const Education = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -64,6 +64,22 @@ const Education = () => {
             <h3 className="text-2xl font-bold text-light mb-4">Cloud-Lösungen</h3>
             <p className="text-light-secondary">
               Sichere Cloud-Speicherung und Zusammenarbeit für Schüler und Lehrkräfte.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.6 }}
+            className="glass-card p-8 rounded-xl"
+          >
+            <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+              <GraduationCap className="w-8 h-8 text-primary" />
+            </div>
+            <h3 className="text-2xl font-bold text-light mb-4">E-Learning Plattformen</h3>
+            <p className="text-light-secondary">
+              Implementation und Betreuung von modernen Lernplattformen für interaktiven Unterricht.
             </p>
           </motion.div>
         </div>
