@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { services } from "@/constants/services";
 import ServiceCard from "@/components/ServiceCard";
 
@@ -19,7 +20,7 @@ const ServicesSection = () => {
     >
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold mb-6">
-          <span className="text-gradient">Unsere Services</span>
+          <span className="text-gradient">Unser Angebot</span>
         </h2>
         <p className="text-xl text-light-secondary max-w-2xl mx-auto">
           Entdecke unsere umfassenden IT-Dienstleistungen für dein Unternehmen.
@@ -35,7 +36,12 @@ const ServicesSection = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2 * index }}
           >
-            <ServiceCard {...service} />
+            <Link 
+              to={`/services/${service.path}`} 
+              className="block h-full"
+            >
+              <ServiceCard {...service} />
+            </Link>
           </motion.div>
         ))}
       </div>
