@@ -11,9 +11,9 @@ const ServiceCard = ({ title, description, icon: Icon }: ServiceCardProps) => {
   return (
     <motion.div
       whileHover={{ y: -5, scale: 1.02 }}
-      className="glass-card p-6 sm:p-8 rounded-xl hover:border-primary/50 transition-colors duration-300 group min-h-[224px] w-full"
+      className="glass-card p-6 sm:p-8 rounded-xl hover:border-primary/50 transition-colors duration-300 group min-h-[224px] w-full flex items-center"
     >
-      <div className="flex flex-col h-full">
+      <div className="flex flex-col h-full w-full">
         <div className="flex items-start sm:items-center gap-4 sm:gap-6">
           <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary/10 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors duration-300">
             <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
