@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Tablet, Shield, Cloud, Laptop, Brain, GraduationCap } from "lucide-react";
 import ServicePageLayout from "@/components/layout/ServicePageLayout";
 import ServiceCard from "@/components/ServiceCard";
@@ -7,12 +6,7 @@ const Education = () => {
   return (
     <ServicePageLayout>
       <div className="container mx-auto px-6 py-32">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <span className="text-primary font-semibold mb-4 block">
             Bildung & Technologie
           </span>
@@ -22,7 +16,7 @@ const Education = () => {
           <p className="text-xl text-light-secondary max-w-3xl mx-auto">
             Moderne Technologielösungen für zeitgemässes Lernen und effiziente Verwaltung deiner Bildungseinrichtung.
           </p>
-        </motion.div>
+        </div>
 
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           <ServiceCard
@@ -48,12 +42,7 @@ const Education = () => {
         </div>
 
         <div className="max-w-3xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="glass-card p-8 rounded-xl mb-8"
-          >
+          <div className="glass-card p-8 rounded-xl mb-8">
             <h3 className="text-2xl font-bold text-light mb-4">Warum mit uns?</h3>
             <ul className="space-y-4 text-light-secondary">
               <li className="flex items-start gap-3">
@@ -69,7 +58,7 @@ const Education = () => {
                 <span>Umfassender Support und Schulungen für Lehrkräfte und IT-Personal</span>
               </li>
             </ul>
-          </motion.div>
+          </div>
         </div>
       </div>
     </ServicePageLayout>
