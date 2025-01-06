@@ -42,17 +42,6 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
             <div className="flex items-center gap-10">
-              <Link
-                to="/"
-                className={`text-lg font-semibold transition-all duration-300 ${
-                  location.pathname === "/"
-                    ? "text-primary scale-105"
-                    : "text-light hover:text-primary hover:scale-105"
-                }`}
-              >
-                Home
-              </Link>
-
               {/* Services Navigation Menu */}
               <NavigationMenu>
                 <NavigationMenuList>
@@ -60,7 +49,7 @@ const Navigation = () => {
                 </NavigationMenuList>
               </NavigationMenu>
 
-              {navigationLinks.slice(1).map((link) => (
+              {navigationLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}

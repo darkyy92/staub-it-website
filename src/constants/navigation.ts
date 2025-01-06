@@ -2,7 +2,6 @@ import { NavigationLink, Service } from "@/types/navigation";
 import { Server, Shield, FileText, Cloud, Code, Brain } from "lucide-react";
 
 export const navigationLinks: NavigationLink[] = [
-  { path: "/", label: "Home" },
   { path: "/about", label: "Über uns" },
   { path: "/contact", label: "Kontakt" },
 ];
