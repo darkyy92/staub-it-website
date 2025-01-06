@@ -4,13 +4,13 @@ import ServicePageLayout from "@/components/layout/ServicePageLayout";
 const Prices = () => {
   return (
     <ServicePageLayout>
-      <div className="container mx-auto px-6 py-16 flex-1 relative z-10">
+      <div className="container mx-auto px-6 py-12 flex-1 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
             <span>Einfache, </span>
             <span className="text-primary">transparente</span>
             <span> Preise</span>
@@ -20,13 +20,13 @@ const Prices = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Left Card */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          {/* Info Card */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass-card p-8 rounded-xl flex items-center"
+            className="bg-dark-secondary/50 backdrop-blur-sm p-8 rounded-xl border border-primary/20"
           >
             <ul className="space-y-4 w-full">
               <li className="flex items-center gap-3">
@@ -72,13 +72,13 @@ const Prices = () => {
             </ul>
           </motion.div>
 
-          {/* Middle Card */}
+          {/* Hourly Rate Card */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="glass-card p-8 rounded-xl flex items-center"
+            className="bg-dark-secondary/50 backdrop-blur-sm p-8 rounded-xl border border-primary/20"
           >
             <div className="w-full">
               <div className="mb-8">
@@ -118,13 +118,13 @@ const Prices = () => {
             </div>
           </motion.div>
 
-          {/* Right Card */}
+          {/* Travel Costs Card */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
-            className="glass-card p-8 rounded-xl flex items-center"
+            className="bg-dark-secondary/50 backdrop-blur-sm p-8 rounded-xl border border-primary/20"
           >
             <div className="w-full">
               <div className="mb-8">
