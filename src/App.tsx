@@ -16,6 +16,7 @@ import CloudBackup from "./pages/CloudBackup";
 import Webdesign from "./pages/Webdesign";
 import AISolutions from "./pages/AISolutions";
 import Education from "./pages/Education";
+import Prices from "./pages/Prices";
 
 const queryClient = new QueryClient();
 
@@ -40,6 +41,7 @@ const App = () => (
               <Route path="/services/webdesign" element={<Webdesign />} />
               <Route path="/services/ai-solutions" element={<AISolutions />} />
               <Route path="/services/education" element={<Education />} />
+              <Route path="/prices" element={<Prices />} />
             </Routes>
           </main>
           <Footer />
