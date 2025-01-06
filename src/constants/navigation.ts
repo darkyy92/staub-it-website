@@ -14,6 +14,12 @@ export const services: Service[] = [
     icon: Server
   },
   {
+    title: "Education",
+    description: "IT-Lösungen für moderne Bildungseinrichtungen",
+    href: "/services/education",
+    icon: GraduationCap
+  },
+  {
     title: "Cybersecurity",
     description: "Umfassender Schutz deiner Systeme vor modernen Bedrohungen",
     href: "/services/cybersecurity",
@@ -42,11 +48,5 @@ export const services: Service[] = [
     description: "Innovative KI-Integrationen für optimierte Geschäftsprozesse",
     href: "/services/ai-solutions",
     icon: Brain
-  },
-  {
-    title: "Education",
-    description: "IT-Lösungen für moderne Bildungseinrichtungen",
-    href: "/services/education",
-    icon: GraduationCap
   }
 ];
