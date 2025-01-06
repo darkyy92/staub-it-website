@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 const GridBackground = () => {
   return (
     <>
-      <div className="absolute inset-0">
+      {/* Grid background */}
+      <div className="absolute inset-0 bg-dark">
         <div 
           className="absolute inset-0"
           style={{
@@ -16,8 +17,10 @@ const GridBackground = () => {
         />
       </div>
 
-      <div className="absolute inset-0 bg-gradient-to-br from-dark via-dark to-primary/5" />
+      {/* Dark overlay with gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-dark/50 via-dark to-primary/5" />
       
+      {/* Animated circles in background */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div 
           initial={{ opacity: 0, scale: 0.5 }}
