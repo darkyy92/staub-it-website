@@ -74,7 +74,7 @@ export const MobileMenu = ({ isOpen, currentPath, onClose }: MobileMenuProps) =>
             variant="outline"
             className="bg-transparent text-white hover:bg-primary-dark w-full"
             onClick={() => {
-              window.open('https://anydesk.com/download', '_blank');
+              window.open('https://drive.google.com/file/d/1LJwv1QGD2tOrEnxB5QcT7FDTQhB2FnhZ/view?usp=sharing', '_blank');
               onClose();
             }}
           >

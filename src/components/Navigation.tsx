@@ -67,7 +67,7 @@ const Navigation = () => {
               <Button 
                 variant="ghost"
                 className="text-light border-2 border-light/20 hover:border-primary px-8 py-4 rounded-full transition-all duration-300 backdrop-blur-sm glass-button hover:bg-dark-secondary/50 hover:text-primary"
-                onClick={() => window.open('https://anydesk.com/download', '_blank')}
+                onClick={() => window.open('https://drive.google.com/file/d/1LJwv1QGD2tOrEnxB5QcT7FDTQhB2FnhZ/view?usp=sharing', '_blank')}
               >
                 AnyDesk
               </Button>
