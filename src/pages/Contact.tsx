@@ -2,10 +2,11 @@ import { motion } from "framer-motion";
 import { ContactInfo } from "@/components/contact/ContactInfo";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { ContactMap } from "@/components/contact/ContactMap";
+import ServicePageLayout from "@/components/layout/ServicePageLayout";
 
 const Contact = () => {
   return (
-    <div className="bg-dark">
+    <ServicePageLayout>
       <div className="container mx-auto px-6 pt-40">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -24,7 +25,7 @@ const Contact = () => {
           </div>
         </motion.div>
       </div>
-    </div>
+    </ServicePageLayout>
   );
 };
 

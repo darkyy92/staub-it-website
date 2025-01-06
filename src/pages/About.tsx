@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 import { TeamMember } from "@/components/team/TeamMember";
+import ServicePageLayout from "@/components/layout/ServicePageLayout";
 
 const About = () => {
   return (
-    <div className="bg-dark">
+    <ServicePageLayout>
       <div className="container mx-auto px-6 pt-40">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -146,7 +147,7 @@ const About = () => {
           </div>
         </motion.div>
       </div>
-    </div>
+    </ServicePageLayout>
   );
 };
 
