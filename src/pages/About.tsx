@@ -70,7 +70,7 @@ const About = () => {
             <h2 className="text-3xl font-bold text-light mb-12 text-center">Unser Team</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
               <TeamMember
-                image="/lovable-uploads/d0fbdf85-3864-40b6-8647-5ed15c80dc9c.png"
+                image="/lovable-uploads/13c00a65-e2ed-457f-a1de-27e8a136c8a5.png"
                 name="Joël Staub"
                 role="Gründer"
                 delay={0.2}
