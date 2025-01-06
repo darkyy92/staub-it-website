@@ -5,7 +5,7 @@ import ServicePageLayout from "@/components/layout/ServicePageLayout";
 const About = () => {
   return (
     <ServicePageLayout>
-      <div className="container mx-auto px-6 pt-40 pb-32">
+      <div className="container mx-auto px-6 pt-40 pb-32 min-h-[calc(100vh-80px)]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
