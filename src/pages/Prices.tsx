@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import ServicePageLayout from "@/components/layout/ServicePageLayout";
+import PricePageLayout from "@/components/layout/PricePageLayout";
 
 const Prices = () => {
   return (
-    <ServicePageLayout>
+    <PricePageLayout>
       <div className="container mx-auto px-6 py-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -169,7 +169,7 @@ const Prices = () => {
           </motion.div>
         </div>
       </div>
-    </ServicePageLayout>
+    </PricePageLayout>
   );
 };
 
