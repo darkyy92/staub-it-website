@@ -1,13 +1,14 @@
 import { motion } from "framer-motion";
+import { TeamMember } from "@/components/team/TeamMember";
 
 const About = () => {
   return (
     <div className="bg-dark">
-      <div className="container mx-auto px-6 pt-40">
+      <div className="container mx-auto px-6 py-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="max-w-4xl mx-auto pb-32"
+          className="max-w-4xl mx-auto"
         >
           <h1 className="text-4xl font-bold text-light mb-8 text-center">
             Über Staub IT
@@ -58,6 +59,56 @@ const About = () => {
               </p>
             </motion.div>
           </div>
+
+          {/* Team Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="mb-12"
+          >
+            <h2 className="text-3xl font-bold text-light mb-12 text-center">Unser Team</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+              <TeamMember
+                image="/lovable-uploads/1046e0e3-33cd-4e29-bef3-62fd04f566b7.png"
+                name="Joël Staub"
+                role="Gründer"
+                delay={0.2}
+              />
+              <TeamMember
+                image="/lovable-uploads/1046e0e3-33cd-4e29-bef3-62fd04f566b7.png"
+                name="Thierry Staub"
+                role="IT Consultant & Web Design"
+                delay={0.4}
+              />
+              <TeamMember
+                image="/lovable-uploads/1046e0e3-33cd-4e29-bef3-62fd04f566b7.png"
+                name="Gabriela Cattaneo"
+                role="Web Design"
+                delay={0.6}
+              />
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+              <TeamMember
+                image="/lovable-uploads/1046e0e3-33cd-4e29-bef3-62fd04f566b7.png"
+                name="Nadja Staub"
+                role="Administration"
+                delay={0.8}
+              />
+              <TeamMember
+                image="/lovable-uploads/1046e0e3-33cd-4e29-bef3-62fd04f566b7.png"
+                name="Mölang"
+                role="Security"
+                delay={1.0}
+              />
+              <TeamMember
+                image="/lovable-uploads/1046e0e3-33cd-4e29-bef3-62fd04f566b7.png"
+                name="Shadow"
+                role="Security"
+                delay={1.2}
+              />
+            </div>
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div
