@@ -24,7 +24,7 @@ const Prices = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass-card p-8 rounded-xl"
+            className="glass-card p-8 rounded-xl flex flex-col justify-center min-h-[400px]"
           >
             <ul className="space-y-4">
               <li className="flex items-center gap-3">
@@ -76,7 +76,7 @@ const Prices = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="glass-card p-8 rounded-xl"
+            className="glass-card p-8 rounded-xl flex flex-col justify-center min-h-[400px]"
           >
             <div className="mb-8">
               <h3 className="text-xl text-light-secondary mb-4">STUNDENSATZ</h3>
@@ -120,7 +120,7 @@ const Prices = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
-            className="glass-card p-8 rounded-xl"
+            className="glass-card p-8 rounded-xl flex flex-col justify-center min-h-[400px]"
           >
             <div className="mb-8">
               <h3 className="text-xl text-light-secondary mb-4">WEGKOSTEN</h3>
