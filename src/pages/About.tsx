@@ -4,11 +4,11 @@ import { TeamMember } from "@/components/team/TeamMember";
 const About = () => {
   return (
     <div className="bg-dark">
-      <div className="container mx-auto px-6 py-20">
+      <div className="container mx-auto px-6 pt-40">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="max-w-4xl mx-auto"
+          className="max-w-4xl mx-auto pb-32"
         >
           <h1 className="text-4xl font-bold text-light mb-8 text-center">
             Über Staub IT
