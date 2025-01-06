@@ -4,7 +4,7 @@ import ServicePageLayout from "@/components/layout/ServicePageLayout";
 const Prices = () => {
   return (
     <ServicePageLayout>
-      <div className="container mx-auto px-6 py-12 flex-1 relative z-10">
+      <div className="container mx-auto px-6 py-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -20,7 +20,7 @@ const Prices = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Info Card */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}

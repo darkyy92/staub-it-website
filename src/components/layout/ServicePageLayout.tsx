@@ -7,9 +7,9 @@ interface ServicePageLayoutProps {
 
 const ServicePageLayout = ({ children }: ServicePageLayoutProps) => {
   return (
-    <div className="min-h-screen flex flex-col bg-dark">
+    <div className="relative bg-dark">
       <GridBackground />
-      <div className="relative flex-1 flex flex-col">
+      <div className="relative">
         {children}
       </div>
     </div>
