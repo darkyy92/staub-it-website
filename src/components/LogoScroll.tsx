@@ -49,7 +49,7 @@ const LogoScroll = () => {
   }, [controls]);
 
   return (
-    <section className="py-1 relative overflow-hidden">
+    <section className="py-40 relative overflow-hidden">
       {/* Grid background */}
       <div className="absolute inset-0 bg-white">
         <div 
