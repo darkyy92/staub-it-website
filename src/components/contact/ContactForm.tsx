@@ -27,16 +27,18 @@ export const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+        to_email: 'hello@staub-it.ch',
+      };
+
       await emailjs.send(
         'service_1onplgm',
         'template_o16txxf',
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          phone: formData.phone,
-          message: formData.message,
-          to_email: 'hello@staub-it.ch',
-        },
+        templateParams,
         '-1c0cLJt9lxrW4Dj-'
       );
 
