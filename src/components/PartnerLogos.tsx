@@ -26,7 +26,7 @@ const PartnerLogos = () => {
           className="text-center mb-12"
         >
           <h2 className="text-2xl md:text-3xl font-bold text-dark">
-            Mehr als 225.000 Kundinnen und Kunden schenken uns ihr Vertrauen, von Start-ups bis Grossunternehmen
+            Wir arbeiten mit führenden Technologiepartnern zusammen, um dir die beste Lösung zu bieten
           </h2>
         </motion.div>
 
