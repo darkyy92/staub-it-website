@@ -7,7 +7,9 @@ const Index = () => {
     <div className="flex flex-col">
       <Hero />
       <ServicesSection />
-      <LogoScroll />
+      <div className="mb-16">
+        <LogoScroll />
+      </div>
     </div>
   );
 };
