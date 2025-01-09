@@ -1,13 +1,13 @@
 import Hero from "@/components/Hero";
 import ServicesSection from "@/components/services/ServicesSection";
-import PartnerLogos from "@/components/PartnerLogos";
+import LogoScroll from "@/components/LogoScroll";
 
 const Index = () => {
   return (
     <div className="flex flex-col">
       <Hero />
-      <PartnerLogos />
       <ServicesSection />
+      <LogoScroll />
     </div>
   );
 };
