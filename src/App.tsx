@@ -18,6 +18,7 @@ import AISolutions from "./pages/AISolutions";
 import Education from "./pages/Education";
 import Prices from "./pages/Prices";
 import Datenschutz from "./pages/Datenschutz";
+import Impressum from "./pages/Impressum";
 
 const queryClient = new QueryClient();
 
@@ -44,6 +45,7 @@ const App = () => (
               <Route path="/services/education" element={<Education />} />
               <Route path="/prices" element={<Prices />} />
               <Route path="/datenschutz" element={<Datenschutz />} />
+              <Route path="/impressum" element={<Impressum />} />
             </Routes>
           </main>
           <Footer />

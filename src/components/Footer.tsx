@@ -54,6 +54,16 @@ const Footer = () => {
                   Kontakt
                 </Link>
               </li>
+              <li>
+                <Link to="/datenschutz" className="text-light-secondary hover:text-primary transition-colors">
+                  Datenschutz
+                </Link>
+              </li>
+              <li>
+                <Link to="/impressum" className="text-light-secondary hover:text-primary transition-colors">
+                  Impressum
+                </Link>
+              </li>
             </ul>
           </motion.div>
 
