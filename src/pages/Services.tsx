@@ -8,7 +8,7 @@ const Services = () => {
       icon: Server,
       title: "IT-Outsourcing",
       description:
-        "Professionelle IT-Betreuung, Support und Schulungen für dein Unternehmen. Wir kümmern uns um deine gesamte IT-Infrastruktur.",
+        "Professionelle IT-Betreuung, Support und Schulungen für KMUs und Schulen. Wir kümmern uns um deine gesamte IT-Infrastruktur.",
     },
     {
       icon: Shield,
@@ -32,7 +32,7 @@ const Services = () => {
       icon: Brain,
       title: "AI-Lösungen",
       description:
-        "Nutze die Kraft der künstlichen Intelligenz für dein Unternehmen. Massgeschneiderte KI-Lösungen für optimierte Prozesse.",
+        "Nutze die Kraft der künstlichen Intelligenz für KMUs und Schulen. Massgeschneiderte KI-Lösungen für optimierte Prozesse.",
     },
   ];
 
@@ -46,7 +46,7 @@ const Services = () => {
         >
           <h1 className="text-4xl font-bold text-light mb-4">Unsere Services</h1>
           <p className="text-light-secondary max-w-2xl mx-auto">
-            Entdecke unsere umfassenden IT-Dienstleistungen für dein Unternehmen.
+            Entdecke unsere umfassenden IT-Dienstleistungen für KMUs und Schulen.
             Wir bieten massgeschneiderte Lösungen für alle deine IT-Bedürfnisse.
           </p>
         </motion.div>

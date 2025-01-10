@@ -10,7 +10,7 @@ export const navigationLinks: NavigationLink[] = [
 export const services: Service[] = [
   {
     title: "IT-Outsourcing",
-    description: "Professionelle IT-Betreuung, Support und Schulungen für dein Unternehmen",
+    description: "Professionelle IT-Betreuung, Support und Schulungen für KMUs und Schulen",
     href: "/services/it-outsourcing",
     icon: Server
   },

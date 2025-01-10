@@ -16,7 +16,7 @@ const ITOutsourcing = () => {
             IT-Outsourcing
           </h1>
           <p className="text-xl text-light-secondary mb-12 leading-relaxed px-4">
-            Professionelle IT-Betreuung, Support und Schulungen für dein Unternehmen. Wir kümmern uns um deine gesamte IT-Infrastruktur, damit du dich auf dein Kerngeschäft konzentrieren kannst.
+            Professionelle IT-Betreuung, Support und Schulungen für KMUs und Schulen. Wir kümmern uns um deine gesamte IT-Infrastruktur, damit du dich auf dein Kerngeschäft konzentrieren kannst.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 mb-8">

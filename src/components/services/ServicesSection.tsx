@@ -23,7 +23,7 @@ const ServicesSection = () => {
           <span className="text-gradient">Unser Angebot</span>
         </h2>
         <p className="text-xl text-light-secondary max-w-2xl mx-auto">
-          Entdecke unsere umfassenden IT-Dienstleistungen für dein Unternehmen.
+          Entdecke unsere umfassenden IT-Dienstleistungen für KMUs und Schulen.
         </p>
       </div>
       

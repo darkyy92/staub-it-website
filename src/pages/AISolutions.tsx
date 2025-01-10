@@ -16,7 +16,7 @@ const AISolutions = () => {
             AI-Lösungen
           </h1>
           <p className="text-xl text-light-secondary mb-12 leading-relaxed">
-            Innovative KI-Integrationen für optimierte Geschäftsprozesse. Nutze die Kraft der künstlichen Intelligenz für dein Unternehmen.
+            Innovative KI-Integrationen für optimierte Geschäftsprozesse. Nutze die Kraft der künstlichen Intelligenz für KMUs und Schulen.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

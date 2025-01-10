@@ -6,7 +6,7 @@ export const services: Service[] = [
     icon: Server,
     title: "IT-Outsourcing",
     description:
-      "Professionelle IT-Betreuung, Support und Schulungen für dein Unternehmen.",
+      "Professionelle IT-Betreuung, Support und Schulungen für KMUs und Schulen.",
     path: "it-outsourcing"
   },
   {
