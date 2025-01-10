@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const partners = [
   {
     name: "Apple",
-    logo: "/lovable-uploads/Apple_logo_white",
+    logo: "/lovable-uploads/Apple_logo_white.svg",
   },
   {
     name: "Google Workspace",
