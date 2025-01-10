@@ -5,6 +5,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
 import About from "./pages/About";
@@ -27,6 +28,7 @@ const App = () => (
     <TooltipProvider>
       <BrowserRouter>
         <div className="min-h-screen bg-dark flex flex-col">
+          <ScrollToTop />
           <Toaster />
           <Sonner />
           <Navigation />
