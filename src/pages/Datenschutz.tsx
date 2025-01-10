@@ -2,7 +2,11 @@ import { motion } from "framer-motion";
 
 const Datenschutz = () => {
   return (
-    <div className="bg-dark">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="bg-dark"
+    >
       <div className="container mx-auto px-6 pt-40">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -169,10 +173,11 @@ Bestehen einer automatisierten Entscheidungsfindung
 Als verantwortungsbewusstes Unternehmen verzichten wir auf eine automatische Entscheidungsfindung oder ein Profiling. Diese Datenschutzerklärung wurde durch den Datenschutzerklärungs-Generator der Cancellarius AG ( http://www.cancellarius.ch ) Schweiz erstellt in enger Kooperation mit der DGD Deutsche Gesellschaft für Datenschutz GmbH.
                 </p>
               </div>
+            </div>
           </motion.div>
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
