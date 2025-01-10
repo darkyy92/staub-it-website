@@ -13,7 +13,7 @@ const Datenschutz = () => {
           animate={{ opacity: 1, y: 0 }}
           className="max-w-4xl mx-auto pb-32"
         >
-          <h1 className="text-4xl font-bold text-light mb-8 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-light mb-8 text-center break-words px-4">
             Datenschutzerklärung
           </h1>
 
