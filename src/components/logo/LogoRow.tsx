@@ -11,12 +11,19 @@ export const LogoRow = ({ logos }: LogoRowProps) => {
       key={`logo-${index}`}
       className="flex items-center justify-center"
     >
-      <img
-        src={logo.src}
-        alt={logo.alt}
-        className="h-[80px] w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
-        style={{ minWidth: "200px" }}
-      />
+      <a 
+        href={logo.url} 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="hover:opacity-100 transition-opacity duration-300"
+      >
+        <img
+          src={logo.src}
+          alt={logo.alt}
+          className="h-[80px] w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
+          style={{ minWidth: "200px" }}
+        />
+      </a>
     </div>
   ));
 };
