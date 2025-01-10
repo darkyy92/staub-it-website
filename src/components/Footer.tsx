@@ -137,7 +137,9 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3 text-light-secondary">
                 <Mail size={20} className="text-primary" />
-                <span>hello@staub-it.ch</span>
+                <a href="mailto:hello@staub-it.ch" className="hover:underline">
+                  hello@staub-it.ch
+                </a>
               </div>
             </div>
           </motion.div>
