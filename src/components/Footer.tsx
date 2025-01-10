@@ -123,18 +123,23 @@ const Footer = () => {
             transition={{ delay: 0.3 }}
             className="space-y-4"
           >
-            <h3 className="text-lg font-semibold text-light mb-2">Kontakt</h3>
-            <p className="text-light-secondary">Weierstrasse 137</p>
-            <p className="text-light-secondary">8405 Winterthur</p>
-            <p className="text-light-secondary">
-              <a 
-                href="mailto:hello@staub-it.ch" 
-                className="hover:text-primary transition-colors duration-200"
-              >
-                hello@staub-it.ch
-              </a>
-            </p>
-            <p className="text-light-secondary">052 347 11 80</p>
+            <h3 className="text-xl font-semibold text-light">Kontakt</h3>
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3 text-light-secondary">
+                <MapPin size={20} className="text-primary" />
+                <span>Frauenfelderstrasse 39,<br />CH-8370 Sirnach</span>
+              </div>
+              <div className="flex items-center space-x-3 text-light-secondary">
+                <Phone size={20} className="text-primary" />
+                <a href="tel:+41523471180" className="hover:underline">
+                  +41 52 347 11 80
+                </a>
+              </div>
+              <div className="flex items-center space-x-3 text-light-secondary">
+                <Mail size={20} className="text-primary" />
+                <span>hello@staub-it.ch</span>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>
