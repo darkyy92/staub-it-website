@@ -4,34 +4,42 @@ const partners = [
   {
     name: "Apple",
     logo: "/lovable-uploads/Apple_logo_white.svg",
+    url: "https://www.apple.com"
   },
   {
     name: "Google Workspace",
     logo: "/lovable-uploads/GoogleWorkspace_Logo_White.png",
+    url: "https://workspace.google.com/"
   },
   {
     name: "Datto",
     logo: "/lovable-uploads/datto-white.webp",
+    url: "https://www.datto.com/"
   },
   {
     name: "Kaseya",
     logo: "/lovable-uploads/Kaseya_PNG-4x_White_Logo.png",
+    url: "https://www.kaseya.com/"
   },
   {
     name: "Jamf",
     logo: "/lovable-uploads/jamf-logo.png",
+    url: "https://www.jamf.com/"
   },
   {
     name: "SonicWall",
     logo: "/lovable-uploads/sonicwall-logo-white.png",
+    url: "https://www.sonicwall.com/"
   },
   {
     name: "Webflow",
     logo: "/lovable-uploads/webflow-logo-white.svg",
+    url: "https://webflow.com/"
   },
   {
     name: "Ubiquiti",
     logo: "/lovable-uploads/ubiquiti-white-logo-1024x309-1-300x143.png",
+    url: "https://ui.com/"
   },
 ];
 
@@ -60,12 +68,19 @@ const Partners = () => {
               whileHover={{ scale: 1.05 }}
               className="w-full max-w-[200px] aspect-[3/2] relative group"
             >
-              <div className="absolute inset-0 rounded-xl bg-dark-secondary/50 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <img
-                src={partner.logo}
-                alt={`${partner.name} logo`}
-                className="w-full h-full object-contain brightness-0 invert"
-              />
+              <a 
+                href={partner.url} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block w-full h-full"
+              >
+                <div className="absolute inset-0 rounded-xl bg-dark-secondary/50 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <img
+                  src={partner.logo}
+                  alt={`${partner.name} logo`}
+                  className="w-full h-full object-contain brightness-0 invert"
+                />
+              </a>
             </motion.div>
           ))}
         </div>
