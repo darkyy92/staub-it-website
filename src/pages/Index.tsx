@@ -9,7 +9,7 @@ const Index = () => {
       <Hero />
       <Partners />
       <ServicesSection />
-      <div className="py-32">
+      <div className="mb-16">
         <LogoScroll />
       </div>
     </div>
