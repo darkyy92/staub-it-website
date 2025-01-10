@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const HeroContent = () => {
   const scrollToServices = () => {
-    const servicesSection = document.querySelector('section');
+    const servicesSection = document.getElementById('services');
     if (servicesSection) {
       servicesSection.scrollIntoView({ behavior: 'smooth' });
     }
