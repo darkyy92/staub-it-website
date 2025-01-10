@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import ServiceCard from "@/components/ServiceCard";
 import { FileText, Mail, Calendar, Users } from "lucide-react";
 import ServicePageLayout from "@/components/layout/ServicePageLayout";
+import ServiceCTA from "@/components/ServiceCTA";
 
 const GoogleWorkspace = () => {
   return (
@@ -41,6 +42,8 @@ const GoogleWorkspace = () => {
               description="Professionelle Videokonferenzen mit deinem Team oder Kunden. Einfach und sicher von überall."
             />
           </div>
+
+          <ServiceCTA text="Google Workspace Demo anfragen" />
         </motion.div>
       </div>
     </ServicePageLayout>

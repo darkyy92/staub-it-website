@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import ServiceCard from "@/components/ServiceCard";
 import { Cloud, Lock, History, Zap } from "lucide-react";
 import ServicePageLayout from "@/components/layout/ServicePageLayout";
+import ServiceCTA from "@/components/ServiceCTA";
 
 const CloudBackup = () => {
   return (
@@ -41,6 +42,8 @@ const CloudBackup = () => {
               description="Im Notfall kannst du deine Daten schnell und einfach wiederherstellen."
             />
           </div>
+
+          <ServiceCTA text="Backup-Strategie kostenlos planen" />
         </motion.div>
       </div>
     </ServicePageLayout>

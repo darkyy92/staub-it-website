@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import ServiceCard from "@/components/ServiceCard";
 import { Brain, Bot, LineChart, Workflow } from "lucide-react";
 import ServicePageLayout from "@/components/layout/ServicePageLayout";
+import ServiceCTA from "@/components/ServiceCTA";
 
 const AISolutions = () => {
   return (
@@ -41,6 +42,8 @@ const AISolutions = () => {
               description="Automatisiere wiederkehrende Aufgaben mit KI und spare Zeit und Ressourcen."
             />
           </div>
+
+          <ServiceCTA text="KI-Potenzial analysieren lassen" />
         </motion.div>
       </div>
     </ServicePageLayout>

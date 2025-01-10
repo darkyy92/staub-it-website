@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import ServiceCard from "@/components/ServiceCard";
 import { Crown, Smartphone, Palette, Gauge } from "lucide-react";
 import ServicePageLayout from "@/components/layout/ServicePageLayout";
+import ServiceCTA from "@/components/ServiceCTA";
 
 const Webdesign = () => {
   return (
@@ -41,6 +42,8 @@ const Webdesign = () => {
               description="Schnelle Ladezeiten und optimale Performance für ein besseres Nutzererlebnis."
             />
           </div>
+          
+          <ServiceCTA text="Webdesign unverbindlich anfragen" />
         </motion.div>
       </div>
     </ServicePageLayout>

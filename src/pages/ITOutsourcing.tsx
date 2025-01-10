@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import ServiceCard from "@/components/ServiceCard";
 import { Server, Shield, Brain } from "lucide-react";
 import ServicePageLayout from "@/components/layout/ServicePageLayout";
+import ServiceCTA from "@/components/ServiceCTA";
 
 const ITOutsourcing = () => {
   return (
@@ -41,6 +42,8 @@ const ITOutsourcing = () => {
               description="Regelmässige Wartung und Pflege deiner IT-Systeme. Proaktive Überwachung und Fehlerbehebung für einen reibungslosen Betrieb."
             />
           </div>
+
+          <ServiceCTA text="IT-Support Angebot anfordern" />
         </motion.div>
       </div>
     </ServicePageLayout>

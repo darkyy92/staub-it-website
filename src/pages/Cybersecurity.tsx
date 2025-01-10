@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import ServiceCard from "@/components/ServiceCard";
 import { Shield, Lock, Eye, Bell } from "lucide-react";
 import ServicePageLayout from "@/components/layout/ServicePageLayout";
+import ServiceCTA from "@/components/ServiceCTA";
 
 const Cybersecurity = () => {
   return (
@@ -41,6 +42,8 @@ const Cybersecurity = () => {
               description="Schnelle und professionelle Reaktion auf Sicherheitsvorfälle mit unserem erfahrenen Security-Team und bewährten Notfallplänen."
             />
           </div>
+
+          <ServiceCTA text="Sicherheitsanalyse vereinbaren" />
         </motion.div>
       </div>
     </ServicePageLayout>

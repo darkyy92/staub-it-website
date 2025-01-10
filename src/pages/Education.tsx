@@ -1,6 +1,7 @@
 import { Tablet, Shield, Cloud, Laptop, Brain, GraduationCap } from "lucide-react";
 import ServicePageLayout from "@/components/layout/ServicePageLayout";
 import ServiceCard from "@/components/ServiceCard";
+import ServiceCTA from "@/components/ServiceCTA";
 
 const Education = () => {
   return (
@@ -54,6 +55,8 @@ const Education = () => {
               </li>
             </ul>
           </div>
+
+          <ServiceCTA text="Kostenloses Erstgespräch für Schulen" />
         </div>
       </div>
     </ServicePageLayout>
