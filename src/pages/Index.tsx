@@ -9,7 +9,7 @@ const Index = () => {
       <Hero />
       <Partners />
       <ServicesSection />
-      <div className="mb-16">
+      <div className="mb-32">
         <LogoScroll />
       </div>
     </div>
