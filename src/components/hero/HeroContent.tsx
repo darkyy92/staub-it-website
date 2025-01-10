@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const HeroContent = () => {
   return (
@@ -61,14 +62,15 @@ const HeroContent = () => {
         transition={{ delay: 0.8 }}
         className="flex flex-col sm:flex-row gap-4 justify-center items-center"
       >
-        <motion.button 
+        <motion.a 
+          href="https://tripetto.app/run/GRRE4Y34LY"
           whileHover={{ scale: 1.05, backgroundColor: '#c65f2a' }}
           whileTap={{ scale: 0.95 }}
           className="group bg-primary hover:bg-primary-dark text-light px-8 py-4 rounded-full transition-all duration-300 flex items-center gap-2 text-lg glass-button shadow-lg hover:shadow-xl hover:shadow-primary/20"
         >
           Unverbindliche Beratung
           <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-        </motion.button>
+        </motion.a>
         <motion.button 
           whileHover={{ scale: 1.05, borderColor: '#e5793a' }}
           whileTap={{ scale: 0.95 }}
