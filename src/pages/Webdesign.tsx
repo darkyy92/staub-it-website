@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import ServiceCard from "@/components/ServiceCard";
-import { Code, Smartphone, Search, Gauge } from "lucide-react";
+import { Crown, Smartphone, Palette, Gauge } from "lucide-react";
 import ServicePageLayout from "@/components/layout/ServicePageLayout";
 
 const Webdesign = () => {
@@ -21,7 +21,7 @@ const Webdesign = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ServiceCard
-              icon={Code}
+              icon={Crown}
               title="Zeitlose Ästhetik"
               description="Unsere Webseiten sind nicht nur funktional, sondern echte Hingucker – modern, stilvoll und einzigartig."
             />
@@ -31,7 +31,7 @@ const Webdesign = () => {
               description="Optimiert für mobile Geräte, damit deine Besucher auch unterwegs das beste Erlebnis haben."
             />
             <ServiceCard
-              icon={Search}
+              icon={Palette}
               title="Individuelles Design"
               description="Individuell gestaltete Webseiten, die auf die Bedürfnisse deiner Marke und deiner Zielgruppe abgestimmt sind."
             />
