@@ -64,7 +64,7 @@ const Partners = () => {
               <img
                 src={partner.logo}
                 alt={`${partner.name} logo`}
-                className="w-full h-full object-contain filter brightness-100 invert-0 dark:brightness-0 dark:invert transition-all duration-300"
+                className="w-full h-full object-contain brightness-0 invert"
               />
             </motion.div>
           ))}
