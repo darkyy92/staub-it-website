@@ -65,7 +65,7 @@ const Footer = () => {
             transition={{ delay: 0.2 }}
             className="space-y-4"
           >
-            <h3 className="text-xl font-semibold text-light">Services</h3>
+            <h3 className="text-xl font-semibold text-light">Angebot</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/services/it-outsourcing" className="text-light-secondary hover:text-primary transition-colors">
@@ -121,7 +121,9 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3 text-light-secondary">
                 <Phone size={20} className="text-primary" />
-                <span>+41 52 347 11 80</span>
+                <a href="tel:+41523471180" className="hover:underline">
+                  +41 52 347 11 80
+                </a>
               </div>
               <div className="flex items-center space-x-3 text-light-secondary">
                 <Mail size={20} className="text-primary" />
