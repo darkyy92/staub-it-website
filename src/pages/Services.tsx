@@ -32,7 +32,7 @@ const Services = () => {
       icon: Brain,
       title: "AI-Lösungen",
       description:
-        "Nutze die Kraft der künstlichen Intelligenz für dein Unternehmen. Maßgeschneiderte KI-Lösungen für optimierte Prozesse.",
+        "Nutze die Kraft der künstlichen Intelligenz für dein Unternehmen. Massgeschneiderte KI-Lösungen für optimierte Prozesse.",
     },
   ];
 
@@ -47,7 +47,7 @@ const Services = () => {
           <h1 className="text-4xl font-bold text-light mb-4">Unsere Services</h1>
           <p className="text-light-secondary max-w-2xl mx-auto">
             Entdecke unsere umfassenden IT-Dienstleistungen für dein Unternehmen.
-            Wir bieten maßgeschneiderte Lösungen für alle deine IT-Bedürfnisse.
+            Wir bieten massgeschneiderte Lösungen für alle deine IT-Bedürfnisse.
           </p>
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

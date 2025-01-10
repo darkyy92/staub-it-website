@@ -17,6 +17,7 @@ import Webdesign from "./pages/Webdesign";
 import AISolutions from "./pages/AISolutions";
 import Education from "./pages/Education";
 import Prices from "./pages/Prices";
+import Datenschutz from "./pages/Datenschutz";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +43,7 @@ const App = () => (
               <Route path="/services/ai-solutions" element={<AISolutions />} />
               <Route path="/services/education" element={<Education />} />
               <Route path="/prices" element={<Prices />} />
+              <Route path="/datenschutz" element={<Datenschutz />} />
             </Routes>
           </main>
           <Footer />
