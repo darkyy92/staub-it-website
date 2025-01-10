@@ -22,8 +22,8 @@ const Webdesign = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ServiceCard
               icon={Code}
-              title="Responsive Design"
-              description="Deine Website passt sich automatisch an alle Bildschirmgrössen an und bietet optimale Benutzerfreundlichkeit."
+              title="Zeitlose Ästhetik"
+              description="Unsere Webseiten sind nicht nur funktional, sondern echte Hingucker – modern, stilvoll und einzigartig."
             />
             <ServiceCard
               icon={Smartphone}
@@ -32,8 +32,8 @@ const Webdesign = () => {
             />
             <ServiceCard
               icon={Search}
-              title="SEO Optimierung"
-              description="Bessere Sichtbarkeit in Suchmaschinen durch professionelle Suchmaschinenoptimierung."
+              title="Individuelles Design"
+              description="Individuell gestaltete Webseiten, die auf die Bedürfnisse deiner Marke und deiner Zielgruppe abgestimmt sind."
             />
             <ServiceCard
               icon={Gauge}
