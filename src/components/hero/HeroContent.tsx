@@ -3,6 +3,13 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const HeroContent = () => {
+  const scrollToServices = () => {
+    const servicesSection = document.querySelector('section');
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -80,6 +87,7 @@ const HeroContent = () => {
           <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
         </motion.a>
         <motion.button 
+          onClick={scrollToServices}
           whileHover={{ scale: 1.05, borderColor: '#e5793a' }}
           whileTap={{ scale: 0.95 }}
           className="text-light border-2 border-light/20 hover:border-primary px-8 py-4 rounded-full transition-all duration-300 backdrop-blur-sm glass-button hover:bg-dark-secondary/50 hover:shadow-lg"
