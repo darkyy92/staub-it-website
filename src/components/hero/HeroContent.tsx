@@ -36,7 +36,15 @@ const HeroContent = () => {
             Innovative IT
           </motion.span>
           <span className="text-light">
-            für KMU und{" "}
+            für{" "}
+            <motion.span 
+              className="inline-block text-light"
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              KMU
+            </motion.span>
+            {" "}und{" "}
             <motion.span 
               className="inline-block text-light"
               whileHover={{ scale: 1.05 }}
