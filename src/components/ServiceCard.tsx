@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
 import { LucideIcon } from "lucide-react";
+import { MagicCard } from "@/components/ui/magic-card";
 
 interface ServiceCardProps {
   title: string;
@@ -9,9 +9,9 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ title, description, icon: Icon }: ServiceCardProps) => {
   return (
-    <motion.div
-      whileHover={{ y: -5, scale: 1.02 }}
-      className="glass-card p-6 sm:p-8 rounded-xl hover:border-primary/50 transition-colors duration-300 group min-h-[224px] w-full"
+    <MagicCard 
+      className="glass-card p-6 sm:p-8 hover:border-primary/50 transition-colors duration-300 group min-h-[224px] w-full"
+      gradientColor="#e5793a"
     >
       <div className="flex flex-col h-full">
         <div className="flex items-start sm:items-center gap-4 sm:gap-6">
@@ -24,7 +24,7 @@ const ServiceCard = ({ title, description, icon: Icon }: ServiceCardProps) => {
           <p className="text-base sm:text-lg text-light-secondary leading-relaxed">{description}</p>
         </div>
       </div>
-    </motion.div>
+    </MagicCard>
   );
 };
 
