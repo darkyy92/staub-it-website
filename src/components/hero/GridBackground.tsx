@@ -1,19 +1,19 @@
 import { motion } from "framer-motion";
-import { AnimatedGridPattern } from "../ui/animated-grid-pattern";
 
 const GridBackground = () => {
   return (
     <>
-      {/* Grid background with animation */}
+      {/* Grid background */}
       <div className="absolute inset-0 bg-dark">
-        <AnimatedGridPattern
-          width={60}
-          height={60}
-          className="[mask-image:radial-gradient(900px_circle_at_center,white,transparent)] fill-white/[0.1] stroke-white/[0.1]"
-          numSquares={30}
-          maxOpacity={0.1}
-          duration={3}
-          repeatDelay={1}
+        <div 
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `
+              linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '60px 60px'
+          }}
         />
       </div>
 
