@@ -3,14 +3,14 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
-import { NavigationMenu, NavigationMenuList } from "@/components/ui/navigation-menu";
 import { navigationLinks } from "@/constants/navigation";
-import { ServicesDropdown } from "./navigation/ServicesDropdown";
 import { MobileMenu } from "./navigation/MobileMenu";
+import { MenuItem, Menu as NavMenu, HoveredLink } from "./ui/navbar-menu";
 
 const Navigation = () => {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeItem, setActiveItem] = useState<string | null>(null);
 
   return (
     <motion.nav
@@ -41,28 +41,39 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
-            <div className="flex items-center gap-10">
-              {/* Services Navigation Menu */}
-              <NavigationMenu>
-                <NavigationMenuList>
-                  <ServicesDropdown />
-                </NavigationMenuList>
-              </NavigationMenu>
+            <NavMenu setActive={setActiveItem}>
+              <MenuItem setActive={setActiveItem} active={activeItem} item="Services">
+                <div className="flex flex-col min-w-[200px] p-4">
+                  <HoveredLink to="/it-outsourcing">IT Outsourcing</HoveredLink>
+                  <HoveredLink to="/cybersecurity">Cybersecurity</HoveredLink>
+                  <HoveredLink to="/cloud-backup">Cloud Backup</HoveredLink>
+                  <HoveredLink to="/google-workspace">Google Workspace</HoveredLink>
+                  <HoveredLink to="/webdesign">Webdesign</HoveredLink>
+                  <HoveredLink to="/education">Education</HoveredLink>
+                  <HoveredLink to="/ai-solutions">AI Solutions</HoveredLink>
+                </div>
+              </MenuItem>
 
               {navigationLinks.map((link) => (
-                <Link
+                <MenuItem 
                   key={link.path}
-                  to={link.path}
-                  className={`text-lg font-semibold transition-all duration-300 ${
-                    location.pathname === link.path
-                      ? "text-primary scale-105"
-                      : "text-light hover:text-primary hover:scale-105"
-                  }`}
+                  setActive={setActiveItem}
+                  active={activeItem}
+                  item={link.label}
                 >
-                  {link.label}
-                </Link>
+                  {link.children && (
+                    <div className="flex flex-col min-w-[200px] p-4">
+                      {link.children.map((child) => (
+                        <HoveredLink key={child.path} to={child.path}>
+                          {child.label}
+                        </HoveredLink>
+                      ))}
+                    </div>
+                  )}
+                </MenuItem>
               ))}
-            </div>
+            </NavMenu>
+
             <div className="flex items-center gap-10">
               <Button 
                 variant="ghost"
