@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { services } from "@/constants/navigation";
+import { motion } from "framer-motion";
 import {
   NavigationMenuContent,
   NavigationMenuItem,
@@ -7,42 +9,69 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 
+const transition = {
+  type: "spring",
+  mass: 0.5,
+  damping: 11.5,
+  stiffness: 100,
+  restDelta: 0.001,
+  restSpeed: 0.001,
+};
+
 export const ServicesDropdown = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <NavigationMenuItem>
+    <NavigationMenuItem 
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <NavigationMenuTrigger className="bg-transparent text-lg font-semibold text-light hover:text-primary hover:bg-transparent">
         Dienstleistungen
       </NavigationMenuTrigger>
       <NavigationMenuContent>
-        <ul className="grid w-[400px] gap-4 p-6 bg-dark border-dark-secondary border rounded-xl shadow-2xl transition-all duration-100 ease-in-out data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:duration-100 data-[motion^=to-]:duration-75 data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52">
-          {services.map((service) => {
-            const Icon = service.icon;
-            return (
-              <li key={service.title}>
-                <NavigationMenuLink asChild>
-                  <Link
-                    to={service.href}
-                    className="block select-none rounded-md p-4 leading-none no-underline outline-none transition-colors hover:bg-dark-secondary hover:text-primary group"
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className="p-2 rounded-lg bg-dark-secondary group-hover:bg-primary/10 transition-colors">
-                        <Icon className="w-5 h-5 text-primary" />
-                      </div>
-                      <div>
-                        <div className="text-base font-semibold leading-none text-light/90 group-hover:text-primary transition-colors">
-                          {service.title}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.85, y: 10 }}
+          animate={{ 
+            opacity: isHovered ? 1 : 0,
+            scale: isHovered ? 1 : 0.85,
+            y: isHovered ? 0 : 10 
+          }}
+          transition={transition}
+        >
+          <ul className="grid w-[400px] gap-4 p-6 bg-dark border border-dark-secondary/20 rounded-xl shadow-2xl backdrop-blur-sm">
+            {services.map((service) => {
+              const Icon = service.icon;
+              return (
+                <motion.li 
+                  key={service.title}
+                  layout
+                >
+                  <NavigationMenuLink asChild>
+                    <Link
+                      to={service.href}
+                      className="block select-none rounded-md p-4 leading-none no-underline outline-none transition-colors hover:bg-dark-secondary hover:text-primary group"
+                    >
+                      <div className="flex items-center gap-3">
+                        <div className="p-2 rounded-lg bg-dark-secondary group-hover:bg-primary/10 transition-colors">
+                          <Icon className="w-5 h-5 text-primary" />
                         </div>
-                        <p className="mt-2 line-clamp-2 text-sm leading-snug text-light/50 group-hover:text-light/70 transition-colors">
-                          {service.description}
-                        </p>
+                        <div>
+                          <div className="text-base font-semibold leading-none text-light/90 group-hover:text-primary transition-colors">
+                            {service.title}
+                          </div>
+                          <p className="mt-2 line-clamp-2 text-sm leading-snug text-light/50 group-hover:text-light/70 transition-colors">
+                            {service.description}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  </Link>
-                </NavigationMenuLink>
-              </li>
-            );
-          })}
-        </ul>
+                    </Link>
+                  </NavigationMenuLink>
+                </motion.li>
+              );
+            })}
+          </ul>
+        </motion.div>
       </NavigationMenuContent>
     </NavigationMenuItem>
   );
