@@ -40,3 +40,76 @@
 .read-the-docs {
   color: #888;
 }
+
+/* CRITICAL CHROME/ARC FIX: Special class for Arc browser and other Chromium browsers */
+.chrome-blur {
+  position: relative !important;
+  background-color: rgba(28, 26, 24, 0.65) !important;
+  border: none !important;
+  z-index: 9999 !important;
+}
+
+/* Arc browser specific - apply blur through pseudo-element workaround */
+.chrome-blur::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: inherit !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  box-shadow: 0 20px 60px -10px rgba(0, 0, 0, 1),
+              0 10px 30px -5px rgba(0, 0, 0, 0.85),
+              0 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  border-radius: inherit !important;
+  z-index: -1 !important;
+}
+
+/* Special class for Arc/Chrome that definitely works */
+.arc-blur-element {
+  position: relative !important;
+  z-index: 999 !important;
+  background-color: rgba(28, 26, 24, 0.6) !important;
+}
+
+.arc-blur-element::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important; /* shorthand for top, right, bottom, left */
+  z-index: -1 !important;
+  backdrop-filter: blur(25px) !important;
+  -webkit-backdrop-filter: blur(25px) !important;
+  background-color: rgba(28, 26, 24, 0.6) !important;
+  border-radius: inherit !important;
+  box-shadow: 0 25px 80px -15px rgba(0, 0, 0, 1),
+              0 15px 40px -10px rgba(0, 0, 0, 0.85),
+              0 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+/* macOS-style frosted glass effect for dropdown */
+#root .glass-dropdown,
+nav .glass-dropdown,
+ul.glass-dropdown {
+  /* Warmer gray semi-transparent background (no blue) */
+  background-color: rgba(28, 26, 24, 0.65) !important; 
+  
+  /* Increased blur effect for Chromium browsers */
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  
+  /* Much stronger shadow for visibility */
+  box-shadow: 0 25px 70px -15px rgba(0, 0, 0, 0.95),
+              0 15px 35px -10px rgba(0, 0, 0, 0.8),
+              0 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  
+  /* Force hardware acceleration */
+  transform: translateZ(0) !important;
+  will-change: backdrop-filter, transform !important;
+  isolation: isolate !important;
+  z-index: 9999 !important;
+  
+  /* Remove standard border */
+  border: none !important;
+}

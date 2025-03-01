@@ -69,9 +69,13 @@ const NavigationMenuContent = React.forwardRef<
   <NavigationMenuPrimitive.Content
     ref={ref}
     className={cn(
-      "left-0 top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:duration-200 data-[motion^=to-]:duration-150 data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out ease-in-out md:absolute md:w-auto",
+      "left-0 top-0 w-full z-50 data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:duration-200 data-[motion^=to-]:duration-150 data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out ease-in-out md:absolute md:w-auto",
       className
     )}
+    style={{
+      backdropFilter: "blur(20px)",
+      WebkitBackdropFilter: "blur(20px)",
+    }}
     {...props}
   />
 ))
@@ -86,10 +90,18 @@ const NavigationMenuViewport = React.forwardRef<
   <div className={cn("absolute left-0 top-full flex justify-center")}>
     <NavigationMenuPrimitive.Viewport
       className={cn(
-        "origin-top relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=open]:duration-200 data-[state=closed]:duration-150 data-[state=closed]:fade-out data-[state=open]:fade-in data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 ease-in-out md:w-[var(--radix-navigation-menu-viewport-width)]",
+        "origin-top relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-xl text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=open]:duration-300 data-[state=closed]:duration-200 data-[state=closed]:fade-out data-[state=open]:fade-in data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 ease-in-out md:w-[var(--radix-navigation-menu-viewport-width)]",
         className
       )}
       ref={ref}
+      style={{
+        backgroundColor: "rgba(28, 26, 24, 0.7)",
+        backdropFilter: "blur(20px)",
+        WebkitBackdropFilter: "blur(20px)",
+        boxShadow: "0 20px 50px -10px rgba(0, 0, 0, 0.9), 0 10px 20px -5px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.05)",
+        transform: "translateZ(0)",
+        willChange: "backdrop-filter"
+      }}
       {...props}
     />
   </div>
@@ -109,7 +121,7 @@ const NavigationMenuIndicator = React.forwardRef<
     )}
     {...props}
   >
-    <div className="relative top-[60%] h-2 w-2 rotate-45 rounded-tl-sm bg-border shadow-md" />
+    {/* Removed triangle indicator for cleaner design */}
   </NavigationMenuPrimitive.Indicator>
 ))
 NavigationMenuIndicator.displayName =

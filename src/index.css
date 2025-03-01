@@ -57,3 +57,15 @@
 .glass-button:hover {
   @apply shadow-lg shadow-black/20;
 }
+
+.glass-dropdown {
+  @apply border-0 rounded-xl;
+  background-color: rgba(28, 26, 24, 0.8); /* Warmer gray without blue */
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.8), 
+              0 5px 15px -3px rgba(0, 0, 0, 0.6),
+              0 0 0 1px rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transform: translateZ(0); /* Force hardware acceleration */
+  will-change: backdrop-filter; /* Optimize for performance */
+}
